@@ -6,14 +6,14 @@
     <title>ASOBI | 遊びから、関係がはじまる。</title>
     <meta
       name="description"
-      content="ASOBIは、日本人と外国人材が役割や国籍を少し離れ、遊び・学び・文化体験を通して関係を育てるUniversal Safety Netです。"
+      content="ASOBIは、異なる文化や背景を持つ人たちが、遊び・学び・文化体験を通して関係を育てるUniversal Safety Netです。"
     >
     <meta name="theme-color" content="#f4f1e8">
     <meta property="og:type" content="website">
     <meta property="og:title" content="ASOBI | 遊びから、関係がはじまる。">
     <meta
       property="og:description"
-      content="日本人と外国人材が、遊び・学び・文化体験を通して関係を育てるUniversal Safety Net。"
+      content="異なる文化や背景を持つ人たちが、遊び・学び・文化体験を通して関係を育てるUniversal Safety Net。"
     >
     <meta property="og:url" content="https://usn-asobi.jp/">
     <style>
@@ -252,15 +252,23 @@
       h1 {
         max-width: 760px;
         margin-bottom: 22px;
-        font-size: clamp(3rem, 6.6vw, 6.4rem);
+        font-size: 5.4rem;
         font-weight: 800;
         line-height: 1.12;
+      }
+
+      .heading-line {
+        display: block;
+      }
+
+      .nowrap-line {
+        white-space: nowrap;
       }
 
       .hero-lead {
         max-width: 620px;
         margin-bottom: 34px;
-        font-size: clamp(1rem, 1.6vw, 1.22rem);
+        font-size: 1.15rem;
         line-height: 1.9;
       }
 
@@ -332,7 +340,7 @@
 
       .intro-strip-copy {
         margin: 0;
-        font-size: clamp(1rem, 1.65vw, 1.28rem);
+        font-size: 1.2rem;
         font-weight: 700;
         line-height: 1.65;
       }
@@ -357,7 +365,7 @@
 
       h2 {
         margin-bottom: 30px;
-        font-size: clamp(2rem, 4.1vw, 4.1rem);
+        font-size: 3.4rem;
         line-height: 1.25;
       }
 
@@ -374,9 +382,13 @@
 
       .concept-statement {
         margin: 0;
-        font-size: clamp(1.15rem, 2vw, 1.55rem);
+        font-size: 1.35rem;
         font-weight: 700;
         line-height: 2;
+      }
+
+      .concept h2 {
+        font-size: 2.75rem;
       }
 
       .concept-copy {
@@ -448,7 +460,7 @@
 
       .manifesto blockquote {
         margin: 0;
-        font-size: clamp(1.7rem, 3.7vw, 3.4rem);
+        font-size: 3rem;
         font-weight: 700;
         line-height: 1.65;
       }
@@ -489,7 +501,7 @@
 
       .service-aside h3 {
         margin: 70px 0 8px;
-        font-size: clamp(1.8rem, 3vw, 2.8rem);
+        font-size: 2.5rem;
         line-height: 1.25;
       }
 
@@ -507,7 +519,7 @@
       .service-lead {
         max-width: 740px;
         margin-bottom: 36px;
-        font-size: clamp(1.05rem, 1.75vw, 1.35rem);
+        font-size: 1.25rem;
         font-weight: 700;
         line-height: 1.9;
       }
@@ -566,7 +578,7 @@
         margin: 0;
         padding-left: 28px;
         border-left: 5px solid var(--yellow);
-        font-size: clamp(1.6rem, 3.3vw, 3rem);
+        font-size: 2.65rem;
         font-weight: 800;
         line-height: 1.55;
       }
@@ -579,7 +591,7 @@
 
       .case-copy h2 {
         margin-bottom: 24px;
-        font-size: clamp(1.8rem, 3.2vw, 3rem);
+        font-size: 2.65rem;
       }
 
       .case-copy p {
@@ -629,6 +641,7 @@
       .join h2 {
         max-width: 720px;
         margin-bottom: 22px;
+        font-size: 3.2rem;
       }
 
       .join-copy {
@@ -718,6 +731,31 @@
           padding-bottom: 52px;
         }
 
+        h1 {
+          font-size: 4.4rem;
+        }
+
+        h2 {
+          font-size: 3rem;
+        }
+
+        .concept h2 {
+          font-size: 2.6rem;
+        }
+
+        .manifesto blockquote {
+          font-size: 2.5rem;
+        }
+
+        .case-quote,
+        .case-copy h2 {
+          font-size: 2.3rem;
+        }
+
+        .join h2 {
+          font-size: 2.8rem;
+        }
+
         .intro-strip-inner,
         .concept-head,
         .service,
@@ -792,7 +830,38 @@
         }
 
         h1 {
-          font-size: clamp(2.6rem, 14vw, 4rem);
+          font-size: 2.55rem;
+        }
+
+        h2,
+        .concept h2 {
+          font-size: 2.05rem;
+        }
+
+        .desktop-break {
+          display: none;
+        }
+
+        .intro-strip-copy {
+          font-size: 1.05rem;
+        }
+
+        .concept-statement,
+        .service-lead {
+          font-size: 1.08rem;
+        }
+
+        .manifesto blockquote {
+          font-size: 1.7rem;
+        }
+
+        .case-quote,
+        .case-copy h2 {
+          font-size: 1.75rem;
+        }
+
+        .join h2 {
+          font-size: 2.05rem;
         }
 
         .hero-lead {
@@ -835,6 +904,17 @@
           flex-direction: column;
           justify-content: center;
           gap: 6px;
+        }
+      }
+
+      @media (max-width: 360px) {
+        h1 {
+          font-size: 2.2rem;
+        }
+
+        .nav-join {
+          padding: 0 14px;
+          font-size: 0.76rem;
         }
       }
 
@@ -883,9 +963,12 @@
         <div class="hero-shade" aria-hidden="true"></div>
         <div class="hero-inner">
           <p class="eyebrow">Universal Safety Net ASOBI</p>
-          <h1 id="hero-title">遊びから、<br>関係がはじまる。</h1>
+          <h1 id="hero-title">
+            <span class="heading-line">遊びから、</span>
+            <span class="heading-line nowrap-line">関係がはじまる。</span>
+          </h1>
           <p class="hero-lead">
-            日本人と外国人材が、役割や国籍を少し離れて、
+            異なる文化や背景を持つ人たちが、役割や国籍を少し離れて、
             同じ時間を楽しむ。ASOBIは、つながりが自然に育つ場所です。
           </p>
           <div class="hero-actions">
@@ -912,7 +995,9 @@
           <div class="concept-head">
             <div>
               <p class="section-kicker">What is ASOBI?</p>
-              <h2 id="about-title">壁を壊すより、<br>壁が生まれにくい時間を。</h2>
+              <h2 id="about-title">
+                壁を壊すより、<br class="desktop-break">壁が生まれにくい時間を。
+              </h2>
             </div>
             <div>
               <p class="concept-statement">
@@ -922,7 +1007,8 @@
               </p>
               <div class="concept-copy">
                 <p>
-                  日本で暮らす外国人材が、経済を支える「労働力」という役割だけで見られると、
+                  日本で働き、暮らす海外にルーツを持つ人が、
+                  経済を支える「労働力」という役割だけで見られると、
                   地域や職場の中で孤立してしまうことがあります。
                 </p>
                 <p>
@@ -968,12 +1054,12 @@
         <div class="manifesto-inner">
           <div class="manifesto-mark" aria-hidden="true"></div>
           <blockquote>
-            支える人と、支えられる人ではなく。<br>
+            支える人と、支えられる人ではなく。<br class="desktop-break">
             同じ時間をつくる、仲間になる。
           </blockquote>
           <p>
             ASOBIは、一方通行の支援ではありません。
-            日本人にも外国人材にも、新しい発見やつながりが生まれる場所です。
+            どんな背景を持つ人にも、新しい発見やつながりが生まれる場所です。
           </p>
         </div>
       </section>
@@ -981,7 +1067,9 @@
       <section class="section services" id="services" aria-labelledby="services-title">
         <div class="section-inner">
           <p class="section-kicker">Our activities</p>
-          <h2 id="services-title">遊ぶ。学ぶ。<br>暮らしにつなげる。</h2>
+          <h2 id="services-title">
+            遊ぶ。学ぶ。<br class="desktop-break">暮らしにつなげる。
+          </h2>
           <p class="service-intro">
             自然や文化を一緒に体験することと、日本での生活に必要な学びを支えること。
             二つの活動が行き来しながら、安心できる関係を育てていきます。
@@ -1051,7 +1139,7 @@
         <div class="section-inner case">
           <div>
             <blockquote class="case-quote">
-              「フォローがあるから、<br>仕事も頑張れる。」
+              「フォローがあるから、<br class="desktop-break">仕事も頑張れる。」
             </blockquote>
             <p class="case-meta">
               星のレッスン参加者の声
@@ -1077,7 +1165,10 @@
         <div class="section-inner join-inner">
           <div>
             <p class="section-kicker">Join us</p>
-            <h2 id="join-title">あなたも、<br>ASOBI NAKAMAに。</h2>
+            <h2 id="join-title">
+              <span class="heading-line">あなたも、</span>
+              <span class="heading-line nowrap-line">ASOBI NAKAMAに。</span>
+            </h2>
             <p class="join-copy">
               参加してみたい、活動を一緒につくりたい、
               地域や職場で取り組みたい。どんな関わり方でも大丈夫です。
