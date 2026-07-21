@@ -343,6 +343,87 @@
         line-height: 1.65;
       }
 
+      .vision {
+        position: relative;
+        overflow: hidden;
+        background: var(--white);
+      }
+
+      .vision::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: max(24px, calc((100% - var(--max)) / 2));
+        width: 1px;
+        height: 88px;
+        background: var(--coral);
+      }
+
+      .vision-layout {
+        display: grid;
+        grid-template-columns: minmax(220px, 0.68fr) minmax(0, 1.32fr);
+        gap: clamp(54px, 9vw, 124px);
+        align-items: start;
+      }
+
+      .vision-heading {
+        padding-top: 28px;
+      }
+
+      .vision h2 {
+        margin-bottom: 22px;
+        font-size: 4.5rem;
+        line-height: 1;
+      }
+
+      .vision-label {
+        display: block;
+        color: var(--ink-soft);
+        font-size: 0.74rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .vision-copy {
+        max-width: 760px;
+        color: var(--ink-soft);
+        font-size: 1rem;
+      }
+
+      .vision-copy p {
+        margin-bottom: 1.8em;
+      }
+
+      .vision-copy .vision-keyline {
+        margin: 2.5em 0;
+        color: var(--forest);
+        font-size: clamp(1.7rem, 3vw, 2.7rem);
+        font-weight: 800;
+        line-height: 1.55;
+      }
+
+      .vision-principles {
+        margin: 2.6em 0;
+        padding: 0;
+        list-style: none;
+        border-top: 1px solid var(--line);
+      }
+
+      .vision-principles li {
+        position: relative;
+        padding: 18px 16px 18px 42px;
+        color: var(--ink);
+        font-weight: 700;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .vision-principles li::before {
+        content: "◇";
+        position: absolute;
+        left: 10px;
+        color: var(--coral);
+      }
+
       .section {
         padding: clamp(86px, 10vw, 150px) 0;
       }
@@ -845,11 +926,20 @@
         }
 
         .intro-strip-inner,
+        .vision-layout,
         .concept-head,
         .service,
         .voice-grid,
         .join-inner {
           grid-template-columns: 1fr;
+        }
+
+        .vision-layout {
+          gap: 34px;
+        }
+
+        .vision h2 {
+          font-size: 4rem;
         }
 
         .intro-strip-inner {
@@ -946,6 +1036,27 @@
         h2,
         .concept h2 {
           font-size: 2.05rem;
+        }
+
+        .vision::before {
+          left: 16px;
+          height: 62px;
+        }
+
+        .vision-heading {
+          padding-top: 12px;
+        }
+
+        .vision h2 {
+          font-size: 3.2rem;
+        }
+
+        .vision-copy {
+          font-size: 0.96rem;
+        }
+
+        .vision-copy .vision-keyline {
+          font-size: 1.7rem;
         }
 
         .desktop-break {
@@ -1119,6 +1230,7 @@
           </span>
         </a>
         <div class="nav-links">
+          <a href="#vision">Vision</a>
           <a href="#about">ASOBIとは</a>
           <a href="#services">活動</a>
           <a href="#story">参加者の声</a>
@@ -1166,6 +1278,51 @@
           </p>
         </div>
       </aside>
+
+      <section class="section vision" id="vision" aria-labelledby="vision-title">
+        <div class="section-inner vision-layout">
+          <header class="vision-heading">
+            <p class="section-kicker">Our vision</p>
+            <h2 id="vision-title">Vision</h2>
+            <span class="vision-label">Universal Safety Net ASOBI</span>
+          </header>
+
+          <div class="vision-copy">
+            <p>
+              少子高齢化に伴う人口減少が進む日本社会の中で、外国人材の役割はますます大きくなっています。
+              その一方で、外国人受け入れに対する不安や否定的な見方も一部に見られ、外国人材が日本社会の中で自らの「居場所」を見出しにくい状況があります。
+              外国人材は、日本人から主に「外国人労働者」という枠組みで捉えられがちです。
+              しかし、受け入れ先の社会において経済的な役割だけに限定されることは、社会的孤立につながるおそれがあります。
+              特に来日初期の人間関係づくりの段階で孤立感が強まると、その後、同国籍に偏ったコミュニティーの形成につながり、相互理解の機会を狭める要因にもなり得ます。
+            </p>
+
+            <p>
+              Neo Wellness は、人間関係構築の初期段階において、「労働者」という役割だけではない関わりの中で、人間関係を築くための手段を提供します。
+            </p>
+
+            <p class="vision-keyline">それが『ASOBI』です。</p>
+
+            <p>
+              「遊び」という言葉は、日本語の中で独特の広がりを持つ言葉です。
+              「娯楽」「ゲーム」「レクリエーション」「余暇活動」といった意味だけでは捉えきれない、人と人との自由な関わりを含んでいます。
+            </p>
+
+            <p>Universal Safety Net 『ASOBI』では、「遊び」を次のように捉えています。</p>
+
+            <ul class="vision-principles">
+              <li>国籍や経歴の枠から少し離れられること</li>
+              <li>利益や評価から少し離れられること</li>
+              <li>個人の固定観念から少し離れられること</li>
+            </ul>
+
+            <p>
+              『ASOBI』とは、この三つの要素がそろった時に生まれる、自由でひらかれた状態です。
+              そこには、新たな関係が生まれ、自分らしさを取り戻していくような再生の意味も込められています。
+              Neo Wellness は、『ASOBI』を通じて、日本人と外国人材が分断するのではなく、自由な空間を共有しながら、壁が生まれにくい社会を目指します。
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section class="section concept" id="about" aria-labelledby="about-title">
         <div class="section-inner">
