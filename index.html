@@ -343,6 +343,113 @@
         line-height: 1.65;
       }
 
+      .activity-gateway {
+        background: var(--paper);
+      }
+
+      .activity-gateway-inner {
+        width: min(calc(100% - 48px), var(--max));
+        margin: 0 auto;
+        padding: clamp(82px, 9vw, 128px) 0;
+      }
+
+      .activity-gateway-head {
+        max-width: 760px;
+        margin-bottom: 48px;
+      }
+
+      .activity-gateway-head h2 {
+        margin-bottom: 18px;
+      }
+
+      .activity-gateway-head > p:last-child {
+        margin-bottom: 0;
+        color: var(--ink-soft);
+      }
+
+      .activity-gateway-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .activity-gateway-link {
+        position: relative;
+        min-height: 360px;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+        color: #fff;
+        background: var(--forest-deep);
+        text-decoration: none;
+      }
+
+      .activity-gateway-link img,
+      .activity-gateway-shade {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .activity-gateway-link img {
+        object-fit: cover;
+        transition: transform 320ms ease;
+      }
+
+      .activity-gateway-link:first-child img {
+        object-position: center 46%;
+      }
+
+      .activity-gateway-link:last-child img {
+        object-position: center 38%;
+      }
+
+      .activity-gateway-shade {
+        background: linear-gradient(
+          to top,
+          rgba(5, 25, 19, 0.92),
+          rgba(5, 25, 19, 0.08) 70%
+        );
+      }
+
+      .activity-gateway-content {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        padding: 30px;
+      }
+
+      .activity-gateway-number {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--yellow);
+        font-size: 0.72rem;
+        font-weight: 800;
+      }
+
+      .activity-gateway-content h3 {
+        margin-bottom: 8px;
+        font-size: 2rem;
+        line-height: 1.25;
+      }
+
+      .activity-gateway-content p {
+        max-width: 440px;
+        margin-bottom: 18px;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.92rem;
+      }
+
+      .activity-gateway-more {
+        font-size: 0.78rem;
+        font-weight: 800;
+      }
+
+      .activity-gateway-link:hover img {
+        transform: scale(1.025);
+      }
+
       .vision {
         position: relative;
         overflow: hidden;
@@ -391,11 +498,32 @@
       }
 
       .vision-copy p {
-        margin-bottom: 1.8em;
+        margin-bottom: 1.5em;
+      }
+
+      .vision-block {
+        padding: 38px 0 22px;
+        border-top: 1px solid var(--line);
+      }
+
+      .vision-block:first-child {
+        padding-top: 0;
+        border-top: 0;
+      }
+
+      .vision-block:last-child {
+        padding-bottom: 0;
+      }
+
+      .vision-block h3 {
+        margin-bottom: 22px;
+        color: var(--ink);
+        font-size: 1.3rem;
+        line-height: 1.5;
       }
 
       .vision-copy .vision-keyline {
-        margin: 2.5em 0;
+        margin: 1.8em 0 0;
         color: var(--forest);
         font-size: clamp(1.7rem, 3vw, 2.7rem);
         font-weight: 800;
@@ -403,7 +531,7 @@
       }
 
       .vision-principles {
-        margin: 2.6em 0;
+        margin: 2.2em 0 0;
         padding: 0;
         list-style: none;
         border-top: 1px solid var(--line);
@@ -477,44 +605,6 @@
 
       .concept-copy p:last-child {
         margin-bottom: 0;
-      }
-
-      .freedoms {
-        margin-top: clamp(64px, 9vw, 120px);
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        border-top: 1px solid var(--line);
-        border-bottom: 1px solid var(--line);
-      }
-
-      .freedom {
-        min-height: 280px;
-        padding: 32px;
-        border-right: 1px solid var(--line);
-      }
-
-      .freedom:last-child {
-        border-right: 0;
-      }
-
-      .freedom-number {
-        display: block;
-        margin-bottom: 54px;
-        color: var(--coral);
-        font-size: 0.76rem;
-        font-weight: 800;
-      }
-
-      .freedom h3 {
-        margin-bottom: 14px;
-        font-size: 1.25rem;
-        line-height: 1.5;
-      }
-
-      .freedom p {
-        margin-bottom: 0;
-        color: var(--ink-soft);
-        font-size: 0.92rem;
       }
 
       .manifesto {
@@ -926,6 +1016,7 @@
         }
 
         .intro-strip-inner,
+        .activity-gateway-grid,
         .vision-layout,
         .concept-head,
         .service,
@@ -946,22 +1037,8 @@
           gap: 8px;
         }
 
-        .freedoms {
-          grid-template-columns: 1fr;
-        }
-
-        .freedom {
-          min-height: 0;
-          border-right: 0;
-          border-bottom: 1px solid var(--line);
-        }
-
-        .freedom:last-child {
-          border-bottom: 0;
-        }
-
-        .freedom-number {
-          margin-bottom: 28px;
+        .activity-gateway-link {
+          min-height: 310px;
         }
 
         .service-aside {
@@ -1067,6 +1144,40 @@
           font-size: 1.05rem;
         }
 
+        .activity-gateway-inner {
+          width: min(calc(100% - 32px), var(--max));
+          padding: 72px 0;
+        }
+
+        .activity-gateway-head {
+          margin-bottom: 32px;
+        }
+
+        .activity-gateway-grid {
+          gap: 10px;
+        }
+
+        .activity-gateway-link {
+          min-height: 250px;
+        }
+
+        .activity-gateway-content {
+          padding: 22px;
+        }
+
+        .activity-gateway-content h3 {
+          font-size: 1.55rem;
+        }
+
+        .vision-block {
+          padding: 30px 0 16px;
+        }
+
+        .vision-block h3 {
+          margin-bottom: 16px;
+          font-size: 1.15rem;
+        }
+
         .concept-statement,
         .service-lead {
           font-size: 1.08rem;
@@ -1104,10 +1215,6 @@
 
         .section {
           padding: 78px 0;
-        }
-
-        .freedom {
-          padding: 28px 8px;
         }
 
         .camp-gallery {
@@ -1279,6 +1386,43 @@
         </div>
       </aside>
 
+      <section class="activity-gateway" aria-labelledby="activity-gateway-title">
+        <div class="activity-gateway-inner">
+          <header class="activity-gateway-head">
+            <p class="section-kicker">Activities at a glance</p>
+            <h2 id="activity-gateway-title">ASOBIで、できること。</h2>
+            <p>
+              文化を一緒に体験することと、暮らしに必要な学びを一緒に続けること。
+              二つの活動から、関係を育てています。
+            </p>
+          </header>
+
+          <div class="activity-gateway-grid">
+            <a class="activity-gateway-link" href="#star-camp">
+              <img data-asset="star3" alt="" loading="lazy">
+              <span class="activity-gateway-shade" aria-hidden="true"></span>
+              <div class="activity-gateway-content">
+                <span class="activity-gateway-number">ACTIVITY 01</span>
+                <h3>STAR CAMP</h3>
+                <p>自然、食、文化を、同じ場所で体験する。</p>
+                <span class="activity-gateway-more">活動を見る ↓</span>
+              </div>
+            </a>
+
+            <a class="activity-gateway-link" href="#lesson">
+              <img data-asset="voice1" alt="" loading="lazy">
+              <span class="activity-gateway-shade" aria-hidden="true"></span>
+              <div class="activity-gateway-content">
+                <span class="activity-gateway-number">ACTIVITY 02</span>
+                <h3>星のレッスン</h3>
+                <p>日本語、資格、仕事の学びを、一緒に続ける。</p>
+                <span class="activity-gateway-more">活動を見る ↓</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section class="section vision" id="vision" aria-labelledby="vision-title">
         <div class="section-inner vision-layout">
           <header class="vision-heading">
@@ -1288,41 +1432,52 @@
           </header>
 
           <div class="vision-copy">
-            <p>
-              少子高齢化に伴う人口減少が進む日本社会の中で、海外にルーツを持つ人々の役割はますます大きくなっています。
-              その一方で、異なる文化的背景を持つ人を受け入れることへの不安や否定的な見方も一部に見られ、海外にルーツを持つ人が日本社会の中で自らの「居場所」を見出しにくい状況があります。
-            </p>
+            <section class="vision-block" aria-labelledby="vision-challenge-title">
+              <h3 id="vision-challenge-title">社会の中にある課題</h3>
+              <p>
+                少子高齢化に伴う人口減少が進む日本社会の中で、海外にルーツを持つ人々の役割はますます大きくなっています。
+                その一方で、異なる文化的背景を持つ人を受け入れることへの不安や否定的な見方も一部に見られ、海外にルーツを持つ人が日本社会の中で自らの「居場所」を見出しにくい状況があります。
+              </p>
 
-            <p>
-              海外にルーツを持つ人は、地域や職場で、主に「働き手」という枠組みで捉えられがちです。
-              しかし、受け入れ先の社会において経済的な役割だけに限定されることは、社会的孤立につながるおそれがあります。
-              特に来日初期の人間関係づくりの段階で孤立感が強まると、その後、同国籍に偏ったコミュニティーの形成につながり、相互理解の機会を狭める要因にもなり得ます。
-            </p>
+              <p>
+                海外にルーツを持つ人は、地域や職場で、主に「働き手」という枠組みで捉えられがちです。
+                しかし、受け入れ先の社会において経済的な役割だけに限定されることは、社会的孤立につながるおそれがあります。
+                特に来日初期の人間関係づくりの段階で孤立感が強まると、その後、同国籍に偏ったコミュニティーの形成につながり、相互理解の機会を狭める要因にもなり得ます。
+              </p>
+            </section>
 
-            <p>
-              Neo Wellness は、人間関係構築の初期段階において、「労働者」という役割だけではない関わりの中で、人間関係を築くための手段を提供します。
-            </p>
+            <section class="vision-block" aria-labelledby="vision-role-title">
+              <h3 id="vision-role-title">ASOBIがつくる関係</h3>
+              <p>
+                Neo Wellness は、人間関係構築の初期段階において、「労働者」という役割だけではない関わりの中で、人間関係を築くための手段を提供します。
+              </p>
+              <p class="vision-keyline">それが『ASOBI』です。</p>
+            </section>
 
-            <p class="vision-keyline">それが『ASOBI』です。</p>
+            <section class="vision-block" aria-labelledby="vision-play-title">
+              <h3 id="vision-play-title">私たちが考える「遊び」</h3>
+              <p>
+                「遊び」という言葉は、日本語の中で独特の広がりを持つ言葉です。
+                「娯楽」「ゲーム」「レクリエーション」「余暇活動」といった意味だけでは捉えきれない、人と人との自由な関わりを含んでいます。
+              </p>
 
-            <p>
-              「遊び」という言葉は、日本語の中で独特の広がりを持つ言葉です。
-              「娯楽」「ゲーム」「レクリエーション」「余暇活動」といった意味だけでは捉えきれない、人と人との自由な関わりを含んでいます。
-            </p>
+              <p>Universal Safety Net 『ASOBI』では、「遊び」を次のように捉えています。</p>
 
-            <p>Universal Safety Net 『ASOBI』では、「遊び」を次のように捉えています。</p>
+              <ul class="vision-principles">
+                <li>国籍や経歴の枠から少し離れられること</li>
+                <li>利益や評価から少し離れられること</li>
+                <li>個人の固定観念から少し離れられること</li>
+              </ul>
+            </section>
 
-            <ul class="vision-principles">
-              <li>国籍や経歴の枠から少し離れられること</li>
-              <li>利益や評価から少し離れられること</li>
-              <li>個人の固定観念から少し離れられること</li>
-            </ul>
-
-            <p>
-              『ASOBI』とは、この三つの要素がそろった時に生まれる、自由でひらかれた状態です。
-              そこには、新たな関係が生まれ、自分らしさを取り戻していくような再生の意味も込められています。
-              Neo Wellness は、『ASOBI』を通じて、日本で暮らす人々が出身や文化的背景によって分断するのではなく、自由な空間を共有しながら、壁が生まれにくい社会を目指します。
-            </p>
+            <section class="vision-block" aria-labelledby="vision-future-title">
+              <h3 id="vision-future-title">目指す社会</h3>
+              <p>
+                『ASOBI』とは、この三つの要素がそろった時に生まれる、自由でひらかれた状態です。
+                そこには、新たな関係が生まれ、自分らしさを取り戻していくような再生の意味も込められています。
+                Neo Wellness は、『ASOBI』を通じて、日本で暮らす人々が出身や文化的背景によって分断するのではなく、自由な空間を共有しながら、壁が生まれにくい社会を目指します。
+              </p>
+            </section>
           </div>
         </div>
       </section>
@@ -1338,51 +1493,21 @@
             </div>
             <div>
               <p class="concept-statement">
-                ASOBIが大切にする「遊び」は、
-                ゲームやレジャーだけではありません。
-                人と人が自由につながれる状態そのものです。
+                一緒に食べる、歩く、学ぶ、笑う。
+                ASOBIは、同じ体験をつくることから、
+                立場や背景を越えた関係を育てます。
               </p>
               <div class="concept-copy">
                 <p>
-                  日本で働き、暮らす海外にルーツを持つ人が、
-                  経済を支える「労働力」という役割だけで見られると、
-                  地域や職場の中で孤立してしまうことがあります。
+                  活動の中心にあるのは、誰かが一方的に支えるのではなく、
+                  参加者みんなで時間と体験をつくることです。
                 </p>
                 <p>
-                  私たちは、立場や背景を越えて同じ体験をつくることが、
-                  暮らしの安心につながると考えています。
-                  一緒に食べる、歩く、学ぶ、笑う。その積み重ねが、
-                  困ったときにも支え合える関係を育てます。
+                  そこで生まれたつながりが、仕事や暮らしの中で困ったときにも、
+                  支え合える安心へと育っていきます。
                 </p>
               </div>
             </div>
-          </div>
-
-          <div class="freedoms" aria-label="ASOBIをつくる3つの自由">
-            <article class="freedom">
-              <span class="freedom-number">01</span>
-              <h3>背景から、少し自由になる</h3>
-              <p>
-                国籍、文化、肩書き。違いを消さずに、
-                それだけで相手を決めつけない時間をつくります。
-              </p>
-            </article>
-            <article class="freedom">
-              <span class="freedom-number">02</span>
-              <h3>損得や評価から離れる</h3>
-              <p>
-                成果を求められる場所ではなく、
-                ただ一緒に楽しむことから関係を始めます。
-              </p>
-            </article>
-            <article class="freedom">
-              <span class="freedom-number">03</span>
-              <h3>自分の思い込みをゆるめる</h3>
-              <p>
-                初めての景色や文化に触れ、
-                自分自身も新しくなれる余白を大切にします。
-              </p>
-            </article>
           </div>
         </div>
       </section>
@@ -1414,7 +1539,7 @@
         </div>
       </section>
 
-      <section class="service-camp" aria-labelledby="camp-title">
+      <section class="service-camp" id="star-camp" aria-labelledby="camp-title">
         <div class="section-inner service">
           <div class="service-aside">
             <span class="service-number">ACTIVITY 01</span>
@@ -1492,7 +1617,7 @@
         </div>
       </section>
 
-      <section class="service-learning" aria-labelledby="lesson-title">
+      <section class="service-learning" id="lesson" aria-labelledby="lesson-title">
         <div class="section-inner service">
           <div class="service-aside">
             <span class="service-number">ACTIVITY 02</span>
