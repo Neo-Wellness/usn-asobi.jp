@@ -16,6 +16,25 @@
       content="異なる文化や背景を持つ人たちが、遊び・学び・文化体験を通して関係を育てるUniversal Safety Net。"
     >
     <meta property="og:url" content="https://usn-asobi.jp/">
+    <meta
+      property="og:image"
+      content="https://usn-asobi.jp/asobi-hero-campfire-v3.png"
+    >
+    <meta
+      property="og:image:alt"
+      content="夕暮れの大きな木の下で、さまざまな人たちが焚き火を囲むASOBIの風景"
+    >
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ASOBI | 遊びから、関係がはじまる。">
+    <meta
+      name="twitter:description"
+      content="異なる文化や背景を持つ人たちが、遊び・学び・文化体験を通して関係を育てるUniversal Safety Net。"
+    >
+    <meta
+      name="twitter:image"
+      content="https://usn-asobi.jp/asobi-hero-campfire-v3.png"
+    >
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <style>
       :root {
         color-scheme: light;
@@ -173,6 +192,10 @@
         color: var(--ink);
         background: var(--yellow);
         border-radius: 4px;
+      }
+
+      .nav-mobile-actions {
+        display: none;
       }
 
       .hero {
@@ -341,113 +364,6 @@
         font-size: 1.2rem;
         font-weight: 700;
         line-height: 1.65;
-      }
-
-      .activity-gateway {
-        background: var(--paper);
-      }
-
-      .activity-gateway-inner {
-        width: min(calc(100% - 48px), var(--max));
-        margin: 0 auto;
-        padding: clamp(82px, 9vw, 128px) 0;
-      }
-
-      .activity-gateway-head {
-        max-width: 760px;
-        margin-bottom: 48px;
-      }
-
-      .activity-gateway-head h2 {
-        margin-bottom: 18px;
-      }
-
-      .activity-gateway-head > p:last-child {
-        margin-bottom: 0;
-        color: var(--ink-soft);
-      }
-
-      .activity-gateway-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 16px;
-      }
-
-      .activity-gateway-link {
-        position: relative;
-        min-height: 360px;
-        overflow: hidden;
-        display: flex;
-        align-items: flex-end;
-        color: #fff;
-        background: var(--forest-deep);
-        text-decoration: none;
-      }
-
-      .activity-gateway-link img,
-      .activity-gateway-shade {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-      }
-
-      .activity-gateway-link img {
-        object-fit: cover;
-        transition: transform 320ms ease;
-      }
-
-      .activity-gateway-link:first-child img {
-        object-position: center 46%;
-      }
-
-      .activity-gateway-link:last-child img {
-        object-position: center 38%;
-      }
-
-      .activity-gateway-shade {
-        background: linear-gradient(
-          to top,
-          rgba(5, 25, 19, 0.92),
-          rgba(5, 25, 19, 0.08) 70%
-        );
-      }
-
-      .activity-gateway-content {
-        position: relative;
-        z-index: 1;
-        width: 100%;
-        padding: 30px;
-      }
-
-      .activity-gateway-number {
-        display: block;
-        margin-bottom: 8px;
-        color: var(--yellow);
-        font-size: 0.72rem;
-        font-weight: 800;
-      }
-
-      .activity-gateway-content h3 {
-        margin-bottom: 8px;
-        font-size: 2rem;
-        line-height: 1.25;
-      }
-
-      .activity-gateway-content p {
-        max-width: 440px;
-        margin-bottom: 18px;
-        color: rgba(255, 255, 255, 0.8);
-        font-size: 0.92rem;
-      }
-
-      .activity-gateway-more {
-        font-size: 0.78rem;
-        font-weight: 800;
-      }
-
-      .activity-gateway-link:hover img {
-        transform: scale(1.025);
       }
 
       .vision {
@@ -934,6 +850,117 @@
         text-transform: uppercase;
       }
 
+      .contact-form-wrap {
+        margin-top: clamp(64px, 8vw, 100px);
+        padding-top: clamp(48px, 6vw, 72px);
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .contact-form-head {
+        display: grid;
+        grid-template-columns: minmax(180px, 0.7fr) minmax(0, 1.3fr);
+        gap: clamp(28px, 6vw, 80px);
+        margin-bottom: 38px;
+      }
+
+      .contact-form-head h3 {
+        margin: 0;
+        color: var(--yellow);
+        font-size: 1.7rem;
+        line-height: 1.4;
+      }
+
+      .contact-form-head p {
+        max-width: 660px;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.72);
+      }
+
+      .contact-form {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 18px;
+      }
+
+      .form-field {
+        display: grid;
+        gap: 9px;
+      }
+
+      .form-field-full {
+        grid-column: 1 / -1;
+      }
+
+      .form-field label {
+        font-size: 0.78rem;
+        font-weight: 800;
+      }
+
+      .form-required {
+        margin-left: 7px;
+        color: var(--yellow);
+        font-size: 0.66rem;
+      }
+
+      .form-field input,
+      .form-field select,
+      .form-field textarea {
+        width: 100%;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.36);
+        border-radius: 2px;
+        font: inherit;
+      }
+
+      .form-field input,
+      .form-field select {
+        min-height: 52px;
+        padding: 0 14px;
+      }
+
+      .form-field textarea {
+        min-height: 170px;
+        padding: 13px 14px;
+        resize: vertical;
+      }
+
+      .form-field select option {
+        color: var(--ink);
+        background: var(--white);
+      }
+
+      .form-field input::placeholder,
+      .form-field textarea::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      .form-field input:focus,
+      .form-field select:focus,
+      .form-field textarea:focus {
+        border-color: var(--yellow);
+        outline: 2px solid var(--yellow);
+        outline-offset: 2px;
+      }
+
+      .contact-submit {
+        grid-column: 1 / -1;
+        justify-self: start;
+        min-height: 52px;
+        padding: 0 24px;
+        color: var(--ink);
+        background: var(--yellow);
+        border: 0;
+        border-radius: 4px;
+        font: inherit;
+        font-weight: 800;
+        cursor: pointer;
+      }
+
+      .contact-submit:hover {
+        background: #ffdc7a;
+      }
+
       .footer {
         color: #fff;
         background: var(--forest-deep);
@@ -963,12 +990,98 @@
 
       @media (max-width: 900px) {
         .nav {
+          position: relative;
           width: min(calc(100% - 32px), var(--max));
           min-height: 72px;
         }
 
+        .nav-mobile-actions {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+
+        .nav-mobile-join {
+          min-height: 40px;
+          display: inline-flex;
+          align-items: center;
+          padding: 0 12px;
+          color: var(--ink);
+          background: var(--yellow);
+          border-radius: 4px;
+          font-size: 0.72rem;
+          font-weight: 800;
+          text-decoration: none;
+        }
+
+        .nav-toggle {
+          width: 42px;
+          height: 42px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          gap: 5px;
+          color: #fff;
+          background: transparent;
+          border: 1px solid rgba(255, 255, 255, 0.56);
+          border-radius: 50%;
+          cursor: pointer;
+        }
+
+        .nav-toggle-line {
+          width: 17px;
+          height: 1px;
+          background: currentColor;
+          transition: transform 180ms ease, opacity 180ms ease;
+        }
+
+        .nav-toggle[aria-expanded="true"] .nav-toggle-line:first-child {
+          transform: translateY(3px) rotate(45deg);
+        }
+
+        .nav-toggle[aria-expanded="true"] .nav-toggle-line:last-child {
+          transform: translateY(-3px) rotate(-45deg);
+        }
+
+        .nav-links {
+          position: absolute;
+          z-index: 30;
+          top: calc(100% + 8px);
+          right: 0;
+          width: min(360px, calc(100vw - 32px));
+          display: grid;
+          gap: 0;
+          padding: 8px;
+          color: var(--ink);
+          background: var(--white);
+          border: 1px solid var(--line);
+          box-shadow: 0 18px 50px rgba(6, 25, 20, 0.22);
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(-8px);
+          transition: opacity 180ms ease, transform 180ms ease, visibility 180ms;
+        }
+
+        .nav-links.is-open {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+        }
+
+        .nav-links a,
         .nav-links a:not(.nav-join) {
-          display: none;
+          min-height: 48px;
+          display: flex;
+          align-items: center;
+          padding: 0 14px;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .nav-links .nav-join {
+          justify-content: center;
+          margin-top: 8px;
+          border: 0;
         }
 
         .hero {
@@ -1016,7 +1129,6 @@
         }
 
         .intro-strip-inner,
-        .activity-gateway-grid,
         .vision-layout,
         .concept-head,
         .service,
@@ -1035,10 +1147,6 @@
 
         .intro-strip-inner {
           gap: 8px;
-        }
-
-        .activity-gateway-link {
-          min-height: 310px;
         }
 
         .service-aside {
@@ -1073,6 +1181,11 @@
 
         .join-inner {
           align-items: start;
+        }
+
+        .contact-form-head {
+          grid-template-columns: 1fr;
+          gap: 14px;
         }
       }
 
@@ -1142,31 +1255,6 @@
 
         .intro-strip-copy {
           font-size: 1.05rem;
-        }
-
-        .activity-gateway-inner {
-          width: min(calc(100% - 32px), var(--max));
-          padding: 72px 0;
-        }
-
-        .activity-gateway-head {
-          margin-bottom: 32px;
-        }
-
-        .activity-gateway-grid {
-          gap: 10px;
-        }
-
-        .activity-gateway-link {
-          min-height: 250px;
-        }
-
-        .activity-gateway-content {
-          padding: 22px;
-        }
-
-        .activity-gateway-content h3 {
-          font-size: 1.55rem;
         }
 
         .vision-block {
@@ -1283,6 +1371,24 @@
           overflow-wrap: anywhere;
         }
 
+        .contact-form-wrap {
+          margin-top: 54px;
+          padding-top: 42px;
+        }
+
+        .contact-form {
+          grid-template-columns: 1fr;
+        }
+
+        .form-field-full,
+        .contact-submit {
+          grid-column: auto;
+        }
+
+        .contact-submit {
+          width: 100%;
+        }
+
         .footer-inner {
           min-height: 132px;
           align-items: flex-start;
@@ -1297,9 +1403,8 @@
           font-size: 2.2rem;
         }
 
-        .nav-join {
-          padding: 0 14px;
-          font-size: 0.76rem;
+        .nav-mobile-join {
+          display: none;
         }
 
         .join h2 {
@@ -1336,12 +1441,25 @@
             <span class="brand-sub">Universal Safety Net</span>
           </span>
         </a>
-        <div class="nav-links">
+        <div class="nav-links" id="site-nav-links">
           <a href="#vision">Vision</a>
           <a href="#about">ASOBIとは</a>
           <a href="#services">活動</a>
           <a href="#story">参加者の声</a>
           <a class="nav-join" href="#join">仲間になる</a>
+        </div>
+        <div class="nav-mobile-actions">
+          <a class="nav-mobile-join" href="#join">仲間になる</a>
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav-links"
+            aria-label="メニューを開く"
+          >
+            <span class="nav-toggle-line" aria-hidden="true"></span>
+            <span class="nav-toggle-line" aria-hidden="true"></span>
+          </button>
         </div>
       </nav>
     </header>
@@ -1368,7 +1486,7 @@
             同じ時間を楽しむ。ASOBIは、つながりが自然に育つ場所です。
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#about">
+            <a class="button button-primary" href="#vision">
               ASOBIを知る
               <span class="button-arrow" aria-hidden="true">↓</span>
             </a>
@@ -1385,43 +1503,6 @@
           </p>
         </div>
       </aside>
-
-      <section class="activity-gateway" aria-labelledby="activity-gateway-title">
-        <div class="activity-gateway-inner">
-          <header class="activity-gateway-head">
-            <p class="section-kicker">Activities at a glance</p>
-            <h2 id="activity-gateway-title">ASOBIで、できること。</h2>
-            <p>
-              文化を一緒に体験することと、暮らしに必要な学びを一緒に続けること。
-              二つの活動から、関係を育てています。
-            </p>
-          </header>
-
-          <div class="activity-gateway-grid">
-            <a class="activity-gateway-link" href="#star-camp">
-              <img data-asset="star3" alt="" loading="lazy">
-              <span class="activity-gateway-shade" aria-hidden="true"></span>
-              <div class="activity-gateway-content">
-                <span class="activity-gateway-number">ACTIVITY 01</span>
-                <h3>STAR CAMP</h3>
-                <p>自然、食、文化を、同じ場所で体験する。</p>
-                <span class="activity-gateway-more">活動を見る ↓</span>
-              </div>
-            </a>
-
-            <a class="activity-gateway-link" href="#lesson">
-              <img data-asset="voice1" alt="" loading="lazy">
-              <span class="activity-gateway-shade" aria-hidden="true"></span>
-              <div class="activity-gateway-content">
-                <span class="activity-gateway-number">ACTIVITY 02</span>
-                <h3>星のレッスン</h3>
-                <p>日本語、資格、仕事の学びを、一緒に続ける。</p>
-                <span class="activity-gateway-more">活動を見る ↓</span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
 
       <section class="section vision" id="vision" aria-labelledby="vision-title">
         <div class="section-inner vision-layout">
@@ -1552,13 +1633,13 @@
               「次は何をしよう？」をみんなで決めるキャンプです。
             </p>
             <p>
-              Universal Safety Net 『ASOBI』では、時折『STAR Camp』を実施しています。言語は、人との関わりの中で使われるものです。そして、人々の営みと言葉が密接に結びついているのが「文化」です。私たちは、文化に触れることなしに、ことばを本当に身につけることは難しいと考えています。
+              Universal Safety Net 『ASOBI』では、時折『STAR CAMP』を実施しています。言語は、人との関わりの中で使われるものです。そして、人々の営みと言葉が密接に結びついているのが「文化」です。私たちは、文化に触れることなしに、ことばを本当に身につけることは難しいと考えています。
             </p>
             <p>
               例えば、日本語の検定試験は、在留資格や技能資格などの要件を満たすために必要なものです。しかし、教室での学習だけでは、人間関係や文化の中でことばを使う経験が不足しやすいという課題があります。
             </p>
             <p>
-              その文化に触れる一つの方法が『STAR Camp』です。日本には、その地域ならではの四季の風景や生態系、人々の営みと自然との調和、歴史や伝統があります。STAR Camp は、それらに直接触れ、さまざまな背景を持つ人たちが同じ体験を共有できる場です。
+              その文化に触れる一つの方法が『STAR CAMP』です。日本には、その地域ならではの四季の風景や生態系、人々の営みと自然との調和、歴史や伝統があります。STAR CAMPは、それらに直接触れ、さまざまな背景を持つ人たちが同じ体験を共有できる場です。
             </p>
             <p>
               地域の食材で料理をしたり、参加者の母国の味を教え合ったり。森や星空の中で過ごす時間には、言葉だけでは届かない文化や暮らしの感覚があります。行き先やその場でする体験も、参加者と一緒に考えながら決めます。
@@ -1735,6 +1816,53 @@
             </li>
           </ul>
         </div>
+        <div class="section-inner contact-form-wrap">
+          <div class="contact-form-head">
+            <h3>お問い合わせ</h3>
+            <p>
+              活動への参加、連携のご相談、その他のご質問をお送りください。
+              入力内容をもとにメールを作成します。
+            </p>
+          </div>
+          <form class="contact-form" id="contact-form">
+            <div class="form-field">
+              <label for="contact-name">
+                お名前<span class="form-required">必須</span>
+              </label>
+              <input id="contact-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="form-field">
+              <label for="contact-email">
+                メールアドレス<span class="form-required">必須</span>
+              </label>
+              <input
+                id="contact-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                inputmode="email"
+                required
+              >
+            </div>
+            <div class="form-field form-field-full">
+              <label for="contact-topic">お問い合わせ内容</label>
+              <select id="contact-topic" name="topic">
+                <option value="活動への参加について">活動への参加について</option>
+                <option value="連携・協働について">連携・協働について</option>
+                <option value="星のレッスンについて">星のレッスンについて</option>
+                <option value="STAR CAMPについて">STAR CAMPについて</option>
+                <option value="その他">その他</option>
+              </select>
+            </div>
+            <div class="form-field form-field-full">
+              <label for="contact-message">
+                メッセージ<span class="form-required">必須</span>
+              </label>
+              <textarea id="contact-message" name="message" required></textarea>
+            </div>
+            <button class="contact-submit" type="submit">メールを作成する</button>
+          </form>
+        </div>
       </section>
     </main>
 
@@ -1758,6 +1886,49 @@
         }
       });
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      const navToggle = document.querySelector(".nav-toggle");
+      const navLinks = document.getElementById("site-nav-links");
+
+      const closeMenu = () => {
+        navLinks.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+        navToggle.setAttribute("aria-label", "メニューを開く");
+      };
+
+      navToggle.addEventListener("click", () => {
+        const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+        navLinks.classList.toggle("is-open", !isOpen);
+        navToggle.setAttribute("aria-expanded", String(!isOpen));
+        navToggle.setAttribute("aria-label", isOpen ? "メニューを開く" : "メニューを閉じる");
+      });
+
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", closeMenu);
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          closeMenu();
+        }
+      });
+
+      document.getElementById("contact-form").addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const form = new FormData(event.currentTarget);
+        const topic = form.get("topic");
+        const subject = `[ASOBIお問い合わせ] ${topic}`;
+        const body = [
+          `お名前: ${form.get("name")}`,
+          `メールアドレス: ${form.get("email")}`,
+          `お問い合わせ内容: ${topic}`,
+          "",
+          form.get("message"),
+        ].join("\n");
+
+        window.location.href = `mailto:neowellness2024@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      });
     </script>
   </body>
 </html>
