@@ -57,6 +57,7 @@
 
       html {
         scroll-behavior: smooth;
+        scroll-padding-top: 76px;
       }
 
       body {
@@ -112,12 +113,22 @@
       }
 
       .site-header {
-        position: absolute;
-        z-index: 20;
+        position: fixed;
+        z-index: 50;
         top: 0;
         left: 0;
         width: 100%;
         color: #fff;
+        background: transparent;
+        transition:
+          background 180ms ease,
+          box-shadow 180ms ease;
+      }
+
+      .site-header.is-scrolled {
+        background: rgba(11, 46, 36, 0.96);
+        box-shadow: 0 8px 28px rgba(5, 24, 18, 0.18);
+        backdrop-filter: blur(10px);
       }
 
       .nav {
@@ -128,6 +139,12 @@
         align-items: center;
         justify-content: space-between;
         border-bottom: 1px solid rgba(255, 255, 255, 0.34);
+        transition: min-height 180ms ease, border-color 180ms ease;
+      }
+
+      .site-header.is-scrolled .nav {
+        min-height: 66px;
+        border-color: transparent;
       }
 
       .brand {
@@ -146,6 +163,12 @@
         border-radius: 50%;
         background: #fff;
         box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.65);
+        transition: width 180ms ease, height 180ms ease;
+      }
+
+      .site-header.is-scrolled .brand-logo {
+        width: 42px;
+        height: 42px;
       }
 
       .brand-name {
@@ -196,6 +219,44 @@
 
       .nav-mobile-actions {
         display: none;
+      }
+
+      .back-to-top {
+        position: fixed;
+        z-index: 45;
+        right: 20px;
+        bottom: 20px;
+        width: 48px;
+        height: 48px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        background: var(--forest-deep);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        box-shadow: 0 10px 28px rgba(5, 24, 18, 0.22);
+        font-size: 1.25rem;
+        line-height: 1;
+        text-decoration: none;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(12px);
+        transition:
+          opacity 180ms ease,
+          visibility 180ms ease,
+          transform 180ms ease,
+          background 180ms ease;
+      }
+
+      .back-to-top:hover {
+        background: var(--forest);
+      }
+
+      .back-to-top.is-visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
       }
 
       .hero {
@@ -417,6 +478,15 @@
         margin-bottom: 1.5em;
       }
 
+      .mobile-reading-summary,
+      .read-more-toggle {
+        display: none;
+      }
+
+      .collapsible-content[hidden] {
+        display: none;
+      }
+
       .vision-block {
         padding: 38px 0 22px;
         border-top: 1px solid var(--line);
@@ -609,7 +679,8 @@
         line-height: 1.9;
       }
 
-      .service-body > p:not(.service-lead) {
+      .service-body > p:not(.service-lead),
+      .service-details > p {
         max-width: 780px;
         color: var(--ink-soft);
       }
@@ -758,7 +829,8 @@
         line-height: 1.5;
       }
 
-      .voice-copy > p:not(.case-meta) {
+      .voice-copy > p:not(.case-meta),
+      .story-details > p {
         margin: 0;
         color: var(--ink-soft);
       }
@@ -1249,6 +1321,53 @@
           font-size: 1.7rem;
         }
 
+        .mobile-reading-summary {
+          display: block;
+          margin: 0 0 22px;
+          color: var(--ink-soft);
+          font-size: 1rem;
+          font-weight: 700;
+          line-height: 1.9;
+        }
+
+        .read-more-toggle:not([hidden]) {
+          width: 100%;
+          min-height: 52px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 18px;
+          margin: 0 0 26px;
+          padding: 0 16px;
+          color: var(--forest-deep);
+          background: transparent;
+          border: 1px solid currentColor;
+          border-radius: 2px;
+          font: inherit;
+          font-size: 0.88rem;
+          font-weight: 800;
+          text-align: left;
+          cursor: pointer;
+        }
+
+        .read-more-toggle[aria-expanded="true"] .read-more-arrow {
+          transform: rotate(180deg);
+        }
+
+        .read-more-arrow {
+          flex: 0 0 auto;
+          transition: transform 180ms ease;
+        }
+
+        .service-camp .read-more-toggle {
+          color: #9c3d2d;
+        }
+
+        .voice-copy .read-more-toggle {
+          margin-top: 24px;
+          color: var(--forest);
+        }
+
         .desktop-break {
           display: none;
         }
@@ -1423,7 +1542,12 @@
           scroll-behavior: auto;
         }
 
-        .button {
+        .button,
+        .site-header,
+        .nav,
+        .brand-logo,
+        .back-to-top,
+        .read-more-arrow {
           transition: none;
         }
       }
@@ -1446,10 +1570,10 @@
           <a href="#about">ASOBIとは</a>
           <a href="#services">活動</a>
           <a href="#story">参加者の声</a>
-          <a class="nav-join" href="#join">仲間になる</a>
+          <a class="nav-join" href="#join">NAKAMAになる</a>
         </div>
         <div class="nav-mobile-actions">
-          <a class="nav-mobile-join" href="#join">仲間になる</a>
+          <a class="nav-mobile-join" href="#join">NAKAMAになる</a>
           <button
             class="nav-toggle"
             type="button"
@@ -1463,6 +1587,10 @@
         </div>
       </nav>
     </header>
+
+    <a class="back-to-top" href="#top" aria-label="ページ上部へ戻る" title="ページ上部へ戻る">
+      <span aria-hidden="true">↑</span>
+    </a>
 
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">
@@ -1513,52 +1641,70 @@
           </header>
 
           <div class="vision-copy">
-            <section class="vision-block" aria-labelledby="vision-challenge-title">
-              <h3 id="vision-challenge-title">社会の中にある課題</h3>
-              <p>
-                少子高齢化に伴う人口減少が進む日本社会の中で、海外にルーツを持つ人々の役割はますます大きくなっています。
-                その一方で、異なる文化的背景を持つ人を受け入れることへの不安や否定的な見方も一部に見られ、海外にルーツを持つ人が日本社会の中で自らの「居場所」を見出しにくい状況があります。
-              </p>
+            <p class="mobile-reading-summary">
+              ASOBIは、「働き手」という役割を越えて人と人が出会い、
+              国籍や経歴、利益や評価から少し離れられる関係を育てます。
+            </p>
+            <button
+              class="read-more-toggle"
+              type="button"
+              aria-expanded="true"
+              aria-controls="vision-details"
+              data-open-label="Visionの全文を読む"
+              data-close-label="Visionの全文を閉じる"
+              hidden
+            >
+              <span class="read-more-label">Visionの全文を閉じる</span>
+              <span class="read-more-arrow" aria-hidden="true">↓</span>
+            </button>
+            <div class="collapsible-content" id="vision-details">
+              <section class="vision-block" aria-labelledby="vision-challenge-title">
+                <h3 id="vision-challenge-title">社会の中にある課題</h3>
+                <p>
+                  少子高齢化に伴う人口減少が進む日本社会の中で、海外にルーツを持つ人々の役割はますます大きくなっています。
+                  その一方で、異なる文化的背景を持つ人を受け入れることへの不安や否定的な見方も一部に見られ、海外にルーツを持つ人が日本社会の中で自らの「居場所」を見出しにくい状況があります。
+                </p>
 
-              <p>
-                海外にルーツを持つ人は、地域や職場で、主に「働き手」という枠組みで捉えられがちです。
-                しかし、受け入れ先の社会において経済的な役割だけに限定されることは、社会的孤立につながるおそれがあります。
-                特に来日初期の人間関係づくりの段階で孤立感が強まると、その後、同国籍に偏ったコミュニティーの形成につながり、相互理解の機会を狭める要因にもなり得ます。
-              </p>
-            </section>
+                <p>
+                  海外にルーツを持つ人は、地域や職場で、主に「働き手」という枠組みで捉えられがちです。
+                  しかし、受け入れ先の社会において経済的な役割だけに限定されることは、社会的孤立につながるおそれがあります。
+                  特に来日初期の人間関係づくりの段階で孤立感が強まると、その後、同国籍に偏ったコミュニティーの形成につながり、相互理解の機会を狭める要因にもなり得ます。
+                </p>
+              </section>
 
-            <section class="vision-block" aria-labelledby="vision-role-title">
-              <h3 id="vision-role-title">ASOBIがつくる関係</h3>
-              <p>
-                Neo Wellness は、人間関係構築の初期段階において、「労働者」という役割だけではない関わりの中で、人間関係を築くための手段を提供します。
-              </p>
-              <p class="vision-keyline">それが『ASOBI』です。</p>
-            </section>
+              <section class="vision-block" aria-labelledby="vision-role-title">
+                <h3 id="vision-role-title">ASOBIがつくる関係</h3>
+                <p>
+                  Neo Wellness は、人間関係構築の初期段階において、「労働者」という役割だけではない関わりの中で、人間関係を築くための手段を提供します。
+                </p>
+                <p class="vision-keyline">それが『ASOBI』です。</p>
+              </section>
 
-            <section class="vision-block" aria-labelledby="vision-play-title">
-              <h3 id="vision-play-title">私たちが考える「遊び」</h3>
-              <p>
-                「遊び」という言葉は、日本語の中で独特の広がりを持つ言葉です。
-                「娯楽」「ゲーム」「レクリエーション」「余暇活動」といった意味だけでは捉えきれない、人と人との自由な関わりを含んでいます。
-              </p>
+              <section class="vision-block" aria-labelledby="vision-play-title">
+                <h3 id="vision-play-title">私たちが考える「遊び」</h3>
+                <p>
+                  「遊び」という言葉は、日本語の中で独特の広がりを持つ言葉です。
+                  「娯楽」「ゲーム」「レクリエーション」「余暇活動」といった意味だけでは捉えきれない、人と人との自由な関わりを含んでいます。
+                </p>
 
-              <p>Universal Safety Net 『ASOBI』では、「遊び」を次のように捉えています。</p>
+                <p>Universal Safety Net 『ASOBI』では、「遊び」を次のように捉えています。</p>
 
-              <ul class="vision-principles">
-                <li>国籍や経歴の枠から少し離れられること</li>
-                <li>利益や評価から少し離れられること</li>
-                <li>個人の固定観念から少し離れられること</li>
-              </ul>
-            </section>
+                <ul class="vision-principles">
+                  <li>国籍や経歴の枠から少し離れられること</li>
+                  <li>利益や評価から少し離れられること</li>
+                  <li>個人の固定観念から少し離れられること</li>
+                </ul>
+              </section>
 
-            <section class="vision-block" aria-labelledby="vision-future-title">
-              <h3 id="vision-future-title">目指す社会</h3>
-              <p>
-                『ASOBI』とは、この三つの要素がそろった時に生まれる、自由でひらかれた状態です。
-                そこには、新たな関係が生まれ、自分らしさを取り戻していくような再生の意味も込められています。
-                Neo Wellness は、『ASOBI』を通じて、日本で暮らす人々が出身や文化的背景によって分断するのではなく、自由な空間を共有しながら、壁が生まれにくい社会を目指します。
-              </p>
-            </section>
+              <section class="vision-block" aria-labelledby="vision-future-title">
+                <h3 id="vision-future-title">目指す社会</h3>
+                <p>
+                  『ASOBI』とは、この三つの要素がそろった時に生まれる、自由でひらかれた状態です。
+                  そこには、新たな関係が生まれ、自分らしさを取り戻していくような再生の意味も込められています。
+                  Neo Wellness は、『ASOBI』を通じて、日本で暮らす人々が出身や文化的背景によって分断するのではなく、自由な空間を共有しながら、壁が生まれにくい社会を目指します。
+                </p>
+              </section>
+            </div>
           </div>
         </div>
       </section>
@@ -1598,7 +1744,7 @@
           <div class="manifesto-mark" aria-hidden="true"></div>
           <blockquote>
             支える人と、支えられる人ではなく。<br class="desktop-break">
-            同じ時間をつくる、仲間になる。
+            同じ時間をつくる、NAKAMAになる。
           </blockquote>
           <p>
             ASOBIは、一方通行の支援ではありません。
@@ -1632,27 +1778,41 @@
               季節、自然、食、文化にふれながら、
               「次は何をしよう？」をみんなで決めるキャンプです。
             </p>
-            <p>
-              Universal Safety Net 『ASOBI』では、時折『STAR CAMP』を実施しています。言語は、人との関わりの中で使われるものです。そして、人々の営みと言葉が密接に結びついているのが「文化」です。私たちは、文化に触れることなしに、ことばを本当に身につけることは難しいと考えています。
-            </p>
-            <p>
-              例えば、日本語の検定試験は、在留資格や技能資格などの要件を満たすために必要なものです。しかし、教室での学習だけでは、人間関係や文化の中でことばを使う経験が不足しやすいという課題があります。
-            </p>
-            <p>
-              その文化に触れる一つの方法が『STAR CAMP』です。日本には、その地域ならではの四季の風景や生態系、人々の営みと自然との調和、歴史や伝統があります。STAR CAMPは、それらに直接触れ、さまざまな背景を持つ人たちが同じ体験を共有できる場です。
-            </p>
-            <p>
-              地域の食材で料理をしたり、参加者の母国の味を教え合ったり。森や星空の中で過ごす時間には、言葉だけでは届かない文化や暮らしの感覚があります。行き先やその場でする体験も、参加者と一緒に考えながら決めます。
-            </p>
-            <ul class="activity-list" aria-label="STAR CAMPの体験例">
-              <li>郷土料理と母国料理</li>
-              <li>森林浴</li>
-              <li>星空観察</li>
-              <li>釣り</li>
-              <li>ハイキング</li>
-              <li>音楽・ダンス</li>
-              <li>写真・映像</li>
-            </ul>
+            <button
+              class="read-more-toggle"
+              type="button"
+              aria-expanded="true"
+              aria-controls="star-camp-details"
+              data-open-label="STAR CAMPの全文を読む"
+              data-close-label="STAR CAMPの全文を閉じる"
+              hidden
+            >
+              <span class="read-more-label">STAR CAMPの全文を閉じる</span>
+              <span class="read-more-arrow" aria-hidden="true">↓</span>
+            </button>
+            <div class="service-details collapsible-content" id="star-camp-details">
+              <p>
+                Universal Safety Net 『ASOBI』では、時折『STAR CAMP』を実施しています。言語は、人との関わりの中で使われるものです。そして、人々の営みと言葉が密接に結びついているのが「文化」です。私たちは、文化に触れることなしに、ことばを本当に身につけることは難しいと考えています。
+              </p>
+              <p>
+                例えば、日本語の検定試験は、在留資格や技能資格などの要件を満たすために必要なものです。しかし、教室での学習だけでは、人間関係や文化の中でことばを使う経験が不足しやすいという課題があります。
+              </p>
+              <p>
+                その文化に触れる一つの方法が『STAR CAMP』です。日本には、その地域ならではの四季の風景や生態系、人々の営みと自然との調和、歴史や伝統があります。STAR CAMPは、それらに直接触れ、さまざまな背景を持つ人たちが同じ体験を共有できる場です。
+              </p>
+              <p>
+                地域の食材で料理をしたり、参加者の母国の味を教え合ったり。森や星空の中で過ごす時間には、言葉だけでは届かない文化や暮らしの感覚があります。行き先やその場でする体験も、参加者と一緒に考えながら決めます。
+              </p>
+              <ul class="activity-list" aria-label="STAR CAMPの体験例">
+                <li>郷土料理と母国料理</li>
+                <li>森林浴</li>
+                <li>星空観察</li>
+                <li>釣り</li>
+                <li>ハイキング</li>
+                <li>音楽・ダンス</li>
+                <li>写真・映像</li>
+              </ul>
+            </div>
           </div>
           <div class="camp-gallery" aria-label="STAR CAMPの写真">
             <div class="camp-gallery-main">
@@ -1753,16 +1913,30 @@
               「フォローがあるから、<br class="desktop-break">仕事も頑張れる。」
             </blockquote>
               <p class="case-meta">ベトナム出身・介護職員</p>
-              <h3>学びは、暮らしの景色を変える。</h3>
-            <p>
-              日本語能力試験N2と介護福祉士資格を目指すベトナム出身の介護職員。
-              6か月の伴走で、勉強が毎週の習慣になり、仕事や地域での会話にも変化が生まれました。
-            </p>
-            <ul class="case-points">
-              <li>介護の専門用語や記録の漢字が読めるように</li>
-              <li>職場での会話と聞き取りに自信がついた</li>
-              <li>日本人の同僚と食事や外出を楽しむ関係へ</li>
-            </ul>
+              <button
+                class="read-more-toggle"
+                type="button"
+                aria-expanded="true"
+                aria-controls="story-details"
+                data-open-label="参加者の声を詳しく読む"
+                data-close-label="参加者の声を閉じる"
+                hidden
+              >
+                <span class="read-more-label">参加者の声を閉じる</span>
+                <span class="read-more-arrow" aria-hidden="true">↓</span>
+              </button>
+              <div class="story-details collapsible-content" id="story-details">
+                <h3>学びは、暮らしの景色を変える。</h3>
+                <p>
+                  日本語能力試験N2と介護福祉士資格を目指すベトナム出身の介護職員。
+                  6か月の伴走で、勉強が毎週の習慣になり、仕事や地域での会話にも変化が生まれました。
+                </p>
+                <ul class="case-points">
+                  <li>介護の専門用語や記録の漢字が読めるように</li>
+                  <li>職場での会話と聞き取りに自信がついた</li>
+                  <li>日本人の同僚と食事や外出を楽しむ関係へ</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -1887,8 +2061,18 @@
       });
       document.getElementById("year").textContent = new Date().getFullYear();
 
+      const siteHeader = document.querySelector(".site-header");
+      const backToTop = document.querySelector(".back-to-top");
       const navToggle = document.querySelector(".nav-toggle");
       const navLinks = document.getElementById("site-nav-links");
+
+      const updateScrollUi = () => {
+        siteHeader.classList.toggle("is-scrolled", window.scrollY > 36);
+        backToTop.classList.toggle("is-visible", window.scrollY > 560);
+      };
+
+      window.addEventListener("scroll", updateScrollUi, { passive: true });
+      updateScrollUi();
 
       const closeMenu = () => {
         navLinks.classList.remove("is-open");
@@ -1912,6 +2096,39 @@
           closeMenu();
         }
       });
+
+      const readingMedia = window.matchMedia("(max-width: 600px)");
+      const readingToggles = document.querySelectorAll(".read-more-toggle");
+
+      const setReadingState = (button, expanded) => {
+        const content = document.getElementById(button.getAttribute("aria-controls"));
+        const label = button.querySelector(".read-more-label");
+
+        content.hidden = !expanded;
+        button.setAttribute("aria-expanded", String(expanded));
+        label.textContent = expanded ? button.dataset.closeLabel : button.dataset.openLabel;
+      };
+
+      const configureReadingSections = () => {
+        readingToggles.forEach((button) => {
+          button.hidden = !readingMedia.matches;
+          setReadingState(button, !readingMedia.matches);
+        });
+      };
+
+      readingToggles.forEach((button) => {
+        button.addEventListener("click", () => {
+          const expanded = button.getAttribute("aria-expanded") === "true";
+          setReadingState(button, !expanded);
+        });
+      });
+
+      if (typeof readingMedia.addEventListener === "function") {
+        readingMedia.addEventListener("change", configureReadingSections);
+      } else {
+        readingMedia.addListener(configureReadingSections);
+      }
+      configureReadingSections();
 
       document.getElementById("contact-form").addEventListener("submit", (event) => {
         event.preventDefault();
