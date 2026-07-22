@@ -902,6 +902,2390 @@
         background-color: rgba(24, 34, 30, 0.08);
         background-image: var(--member-source);
         background-repeat: no-repeat;
+        background-size: 430% auto;
+        border-radius: 30px;
+      }
+
+      .member-photo-masashi {
+        background-position: 4.13% 15.6%;
+      }
+
+      .member-photo-eriko {
+        background-position: 48.37% 15.6%;
+      }
+
+      .member-photo-yasushi {
+        background-position: 92.28% 15.6%;
+      }
+
+      .member-body {
+        padding: 28px 26px 30px;
+      }
+
+      .member-name {
+        margin: 0 0 22px;
+        color: var(--forest-deep);
+        font-size: 1.5rem;
+        line-height: 1.4;
+      }
+
+      .member-copy {
+        margin: 0;
+        color: var(--ink-soft);
+        font-size: 0.92rem;
+        line-height: 1.9;
+      }
+
+      .member-copy + .member-copy {
+        margin-top: 16px;
+      }
+
+      .company-profile {
+        margin-top: clamp(70px, 9vw, 112px);
+        padding-top: clamp(42px, 6vw, 64px);
+        display: grid;
+        grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.28fr);
+        gap: clamp(40px, 8vw, 110px);
+        border-top: 1px solid var(--line);
+      }
+
+      .company-profile h3 {
+        margin: 0;
+        font-size: 1.75rem;
+        line-height: 1.4;
+      }
+
+      .company-details {
+        margin: 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .company-row {
+        min-height: 72px;
+        display: grid;
+        grid-template-columns: 120px minmax(0, 1fr);
+        gap: 24px;
+        align-items: center;
+        padding: 16px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .company-row dt {
+        color: var(--ink-soft);
+        font-size: 0.76rem;
+        font-weight: 800;
+      }
+
+      .company-row dd {
+        margin: 0;
+        font-weight: 700;
+      }
+
+      .join {
+        color: #fff;
+        background: var(--forest);
+      }
+
+      .join-inner {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+        gap: clamp(48px, 9vw, 120px);
+        align-items: end;
+      }
+
+      .concept-head > *,
+      .service > *,
+      .case > *,
+      .join-inner > * {
+        min-width: 0;
+      }
+
+      .join .section-kicker {
+        color: var(--yellow);
+      }
+
+      .join h2 {
+        max-width: 720px;
+        margin-bottom: 22px;
+        font-size: 3.2rem;
+      }
+
+      .join-copy {
+        max-width: 680px;
+        color: rgba(255, 255, 255, 0.76);
+      }
+
+      .contact-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .contact-list a {
+        min-height: 66px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        font-size: 0.94rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .contact-list a:hover {
+        color: var(--yellow);
+      }
+
+      .contact-label {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.7rem;
+        text-transform: uppercase;
+      }
+
+      .contact-form-wrap {
+        margin-top: clamp(64px, 8vw, 100px);
+        padding-top: clamp(48px, 6vw, 72px);
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .contact-form-head {
+        display: grid;
+        grid-template-columns: minmax(180px, 0.7fr) minmax(0, 1.3fr);
+        gap: clamp(28px, 6vw, 80px);
+        margin-bottom: 38px;
+      }
+
+      .contact-form-head h3 {
+        margin: 0;
+        color: var(--yellow);
+        font-size: 1.7rem;
+        line-height: 1.4;
+      }
+
+      .contact-form-head p {
+        max-width: 660px;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.72);
+      }
+
+      .contact-form {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 18px;
+      }
+
+      .form-field {
+        display: grid;
+        gap: 9px;
+      }
+
+      .form-field-full {
+        grid-column: 1 / -1;
+      }
+
+      .form-field label {
+        font-size: 0.78rem;
+        font-weight: 800;
+      }
+
+      .form-required {
+        margin-left: 7px;
+        color: var(--yellow);
+        font-size: 0.66rem;
+      }
+
+      .form-field input,
+      .form-field select,
+      .form-field textarea {
+        width: 100%;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.36);
+        border-radius: 2px;
+        font: inherit;
+      }
+
+      .form-field input,
+      .form-field select {
+        min-height: 52px;
+        padding: 0 14px;
+      }
+
+      .form-field textarea {
+        min-height: 170px;
+        padding: 13px 14px;
+        resize: vertical;
+      }
+
+      .form-field select option {
+        color: var(--ink);
+        background: var(--white);
+      }
+
+      .form-field input::placeholder,
+      .form-field textarea::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      .form-field input:focus,
+      .form-field select:focus,
+      .form-field textarea:focus {
+        border-color: var(--yellow);
+        outline: 2px solid var(--yellow);
+        outline-offset: 2px;
+      }
+
+      .contact-submit {
+        grid-column: 1 / -1;
+        justify-self: start;
+        min-height: 52px;
+        padding: 0 24px;
+        color: var(--ink);
+        background: var(--yellow);
+        border: 0;
+        border-radius: 4px;
+        font: inherit;
+        font-weight: 800;
+        cursor: pointer;
+      }
+
+      .contact-submit:hover {
+        background: #ffdc7a;
+      }
+
+      .footer {
+        color: #fff;
+        background: var(--forest-deep);
+      }
+
+      .footer-inner {
+        width: min(calc(100% - 48px), var(--max));
+        min-height: 106px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .footer p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.56);
+        font-size: 0.72rem;
+      }
+
+      .footer a {
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 0.74rem;
+        text-decoration: none;
+      }
+
+      @media (max-width: 900px) {
+        .nav {
+          position: relative;
+          width: min(calc(100% - 32px), var(--max));
+          min-height: 72px;
+        }
+
+        .nav-mobile-actions {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+
+        .nav-mobile-join {
+          min-height: 40px;
+          display: inline-flex;
+          align-items: center;
+          padding: 0 12px;
+          color: var(--ink);
+          background: var(--yellow);
+          border-radius: 4px;
+          font-size: 0.72rem;
+          font-weight: 800;
+          text-decoration: none;
+        }
+
+        .nav-toggle {
+          width: 42px;
+          height: 42px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          gap: 5px;
+          color: #fff;
+          background: transparent;
+          border: 1px solid rgba(255, 255, 255, 0.56);
+          border-radius: 50%;
+          cursor: pointer;
+        }
+
+        .nav-toggle-line {
+          width: 17px;
+          height: 1px;
+          background: currentColor;
+          transition: transform 180ms ease, opacity 180ms ease;
+        }
+
+        .nav-toggle[aria-expanded="true"] .nav-toggle-line:first-child {
+          transform: translateY(3px) rotate(45deg);
+        }
+
+        .nav-toggle[aria-expanded="true"] .nav-toggle-line:last-child {
+          transform: translateY(-3px) rotate(-45deg);
+        }
+
+        .nav-links {
+          position: absolute;
+          z-index: 30;
+          top: calc(100% + 8px);
+          right: 0;
+          width: min(360px, calc(100vw - 32px));
+          display: grid;
+          gap: 0;
+          padding: 8px;
+          color: var(--ink);
+          background: var(--white);
+          border: 1px solid var(--line);
+          box-shadow: 0 18px 50px rgba(6, 25, 20, 0.22);
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(-8px);
+          transition: opacity 180ms ease, transform 180ms ease, visibility 180ms;
+        }
+
+        .nav-links.is-open {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+        }
+
+        .nav-links a,
+        .nav-links a:not(.nav-join) {
+          min-height: 48px;
+          display: flex;
+          align-items: center;
+          padding: 0 14px;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .nav-links .nav-join {
+          justify-content: center;
+          margin-top: 8px;
+          border: 0;
+        }
+
+        .hero {
+          min-height: 82svh;
+        }
+
+        .hero-inner,
+        .section-inner,
+        .intro-strip-inner,
+        .manifesto-inner,
+        .footer-inner {
+          width: min(calc(100% - 32px), var(--max));
+        }
+
+        .hero-inner {
+          padding-bottom: 52px;
+        }
+
+        h1 {
+          font-size: 4.4rem;
+        }
+
+        h2 {
+          font-size: 3rem;
+        }
+
+        .concept h2 {
+          font-size: 2.6rem;
+        }
+
+        .manifesto blockquote {
+          font-size: 2.5rem;
+        }
+
+        .voice-title {
+          font-size: 3.2rem;
+        }
+
+        .case-quote {
+          font-size: 2.3rem;
+        }
+
+        .join h2 {
+          font-size: 2.8rem;
+        }
+
+        .intro-strip-inner,
+        .vision-layout,
+        .concept-head,
+        .service,
+        .voice-grid,
+        .team-head,
+        .company-profile,
+        .join-inner {
+          grid-template-columns: 1fr;
+        }
+
+        .vision-layout {
+          gap: 34px;
+        }
+
+        .vision h2 {
+          font-size: 4rem;
+        }
+
+        .intro-strip-inner {
+          gap: 8px;
+        }
+
+        .service-aside {
+          padding-right: 0;
+          border-right: 0;
+        }
+
+        .service-aside h3 {
+          margin-top: 36px;
+        }
+
+        .service-body {
+          padding: 0 0 70px;
+        }
+
+        .camp-gallery {
+          padding-bottom: 70px;
+        }
+
+        .camp-gallery-main {
+          height: 440px;
+          grid-template-columns: minmax(0, 1.35fr) minmax(220px, 0.65fr);
+        }
+
+        .camp-gallery-row {
+          height: 220px;
+        }
+
+        .voice-grid {
+          gap: 62px;
+        }
+
+        .member-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .join-inner {
+          align-items: start;
+        }
+
+        .contact-form-head {
+          grid-template-columns: 1fr;
+          gap: 14px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .brand-sub {
+          display: none;
+        }
+
+        .brand-logo {
+          width: 42px;
+          height: 42px;
+        }
+
+        .hero {
+          min-height: 78svh;
+        }
+
+        .hero-media {
+          object-position: 57% center;
+        }
+
+        .hero-shade {
+          background: rgba(6, 25, 20, 0.58);
+        }
+
+        .hero-shade::after {
+          display: none;
+        }
+
+        .hero-inner {
+          padding-top: 132px;
+        }
+
+        h1 {
+          font-size: 2.55rem;
+        }
+
+        h2,
+        .concept h2 {
+          font-size: 2.05rem;
+        }
+
+        .vision::before {
+          left: 16px;
+          height: 62px;
+        }
+
+        .vision-heading {
+          padding-top: 12px;
+        }
+
+        .vision h2 {
+          font-size: 3.2rem;
+        }
+
+        .vision-copy {
+          font-size: 0.96rem;
+        }
+
+        .vision-copy .vision-keyline {
+          font-size: 1.7rem;
+        }
+
+        .mobile-reading-summary {
+          display: block;
+          margin: 0 0 22px;
+          color: var(--ink-soft);
+          font-size: 1rem;
+          font-weight: 700;
+          line-height: 1.9;
+        }
+
+        .read-more-toggle:not([hidden]) {
+          width: 100%;
+          min-height: 52px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 18px;
+          margin: 0 0 26px;
+          padding: 0 16px;
+          color: var(--forest-deep);
+          background: transparent;
+          border: 1px solid currentColor;
+          border-radius: 2px;
+          font: inherit;
+          font-size: 0.88rem;
+          font-weight: 800;
+          text-align: left;
+          cursor: pointer;
+        }
+
+        .read-more-toggle[aria-expanded="true"] .read-more-arrow {
+          transform: rotate(180deg);
+        }
+
+        .read-more-arrow {
+          flex: 0 0 auto;
+          transition: transform 180ms ease;
+        }
+
+        .service-camp .read-more-toggle {
+          color: #9c3d2d;
+        }
+
+        .voice-copy .read-more-toggle {
+          margin-top: 24px;
+          color: var(--forest);
+        }
+
+        .desktop-break {
+          display: none;
+        }
+
+        .intro-strip-copy {
+          font-size: 1.05rem;
+        }
+
+        .vision-block {
+          padding: 30px 0 16px;
+        }
+
+        .vision-block h3 {
+          margin-bottom: 16px;
+          font-size: 1.15rem;
+        }
+
+        .concept-statement,
+        .service-lead {
+          font-size: 1.08rem;
+        }
+
+        .manifesto blockquote {
+          font-size: 1.7rem;
+        }
+
+        .voice-title {
+          margin-bottom: 38px;
+          font-size: 2.45rem;
+        }
+
+        .case-quote {
+          font-size: 1.75rem;
+        }
+
+        .join h2 {
+          font-size: 1.9rem;
+        }
+
+        .hero-lead {
+          line-height: 1.72;
+        }
+
+        .hero-actions {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+
+        .button {
+          width: 100%;
+        }
+
+        .section {
+          padding: 78px 0;
+        }
+
+        .camp-gallery {
+          gap: 8px;
+        }
+
+        .camp-gallery-main,
+        .camp-gallery-row {
+          height: auto;
+          gap: 8px;
+        }
+
+        .camp-gallery-main {
+          grid-template-columns: 1fr;
+        }
+
+        .camp-gallery-main .camp-photo:first-child {
+          aspect-ratio: 4 / 3;
+        }
+
+        .camp-gallery-main .camp-photo:last-child {
+          width: min(76%, 340px);
+          aspect-ratio: 3 / 4;
+          justify-self: end;
+        }
+
+        .camp-gallery-row {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .camp-gallery-row .camp-photo {
+          aspect-ratio: 4 / 3;
+        }
+
+        .camp-gallery-row .camp-photo:last-child {
+          aspect-ratio: 3 / 4;
+        }
+
+        .voice-grid {
+          gap: 46px;
+        }
+
+        .voice-photos {
+          gap: 8px;
+        }
+
+        .voice-photo:last-child {
+          margin-top: 34px;
+        }
+
+        .voice-copy h3 {
+          margin-top: 36px;
+          font-size: 1.45rem;
+        }
+
+        .member-grid {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+
+        .member-body {
+          padding: 24px 20px 26px;
+        }
+
+        .company-row {
+          grid-template-columns: 1fr;
+          gap: 4px;
+          align-items: start;
+        }
+
+        .case-meta {
+          margin-top: 14px;
+        }
+
+        .contact-list a {
+          align-items: flex-start;
+          flex-direction: column;
+          justify-content: center;
+          gap: 2px;
+          padding: 14px 0;
+          overflow-wrap: anywhere;
+        }
+
+        .contact-form-wrap {
+          margin-top: 54px;
+          padding-top: 42px;
+        }
+
+        .contact-form {
+          grid-template-columns: 1fr;
+        }
+
+        .form-field-full,
+        .contact-submit {
+          grid-column: auto;
+        }
+
+        .contact-submit {
+          width: 100%;
+        }
+
+        .footer-inner {
+          min-height: 132px;
+          align-items: flex-start;
+          flex-direction: column;
+          justify-content: center;
+          gap: 6px;
+        }
+      }
+
+      @media (max-width: 360px) {
+        h1 {
+          font-size: 2.2rem;
+        }
+
+        .nav-mobile-join {
+          display: none;
+        }
+
+        .join h2 {
+          font-size: 1.8rem;
+        }
+      }
+
+      @media (max-width: 340px) {
+        .join h2 {
+          font-size: 1.6rem;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        .button,
+        .site-header,
+        .nav,
+        .brand-logo,
+        .back-to-top,
+        .read-more-arrow {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">本文へ移動</a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="メインナビゲーション">
+        <a class="brand" href="#top" aria-label="ASOBI ホーム">
+          <img class="brand-logo" data-asset="logo" alt="">
+          <span>
+            <span class="brand-name">ASOBI</span>
+            <span class="brand-sub">Universal Safety Net</span>
+          </span>
+        </a>
+        <div class="nav-links" id="site-nav-links">
+          <a href="#vision">Vision</a>
+          <a href="#about">ASOBIとは</a>
+          <a href="#services">活動</a>
+          <a href="#story">参加者の声</a>
+          <a href="#team">私たち</a>
+          <a class="nav-join" href="#join">NAKAMAになる</a>
+        </div>
+        <div class="nav-mobile-actions">
+          <a class="nav-mobile-join" href="#join">NAKAMAになる</a>
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav-links"
+            aria-label="メニューを開く"
+          >
+            <span class="nav-toggle-line" aria-hidden="true"></span>
+            <span class="nav-toggle-line" aria-hidden="true"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <a class="back-to-top" href="#top" aria-label="ページ上部へ戻る" title="ページ上部へ戻る">
+      <span aria-hidden="true">↑</span>
+    </a>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <img
+          class="hero-media"
+          data-asset="hero"
+          alt=""
+          width="1672"
+          height="941"
+          fetchpriority="high"
+        >
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-inner">
+          <p class="eyebrow">Universal Safety Net ASOBI</p>
+          <h1 id="hero-title">
+            <span class="heading-line">ASOBIが、</span>
+            <span class="heading-line nowrap-line">すべてをつなぐ</span>
+          </h1>
+          <p class="hero-lead">
+            異なる文化や背景を持つ人たちが、役割や国籍を少し離れて、
+            同じ時間を楽しむ。ASOBIは、つながりが自然に育つ場所です。
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#vision">
+              ASOBIを知る
+              <span class="button-arrow" aria-hidden="true">↓</span>
+            </a>
+            <a class="button button-ghost" href="#join">ASOBI NAKAMAになる</a>
+          </div>
+        </div>
+      </section>
+
+      <aside class="intro-strip" aria-label="ASOBIの考え方">
+        <div class="intro-strip-inner">
+          <span class="intro-strip-label">Our starting point</span>
+          <p class="intro-strip-copy">
+            「働く人」の前に、ひとりの人として出会える場所を。
+          </p>
+        </div>
+      </aside>
+
+      <section class="section vision" id="vision" aria-labelledby="vision-title">
+        <div class="section-inner vision-layout">
+          <header class="vision-heading">
+            <p class="section-kicker">Our vision</p>
+            <h2 id="vision-title">Vision</h2>
+            <span class="vision-label">Universal Safety Net ASOBI</span>
+          </header>
+
+          <div class="vision-copy">
+            <p class="mobile-reading-summary">
+              ASOBIは、「働き手」という役割を越えて人と人が出会い、
+              国籍や経歴、利益や評価から少し離れられる関係を育てます。
+            </p>
+            <button
+              class="read-more-toggle"
+              type="button"
+              aria-expanded="true"
+              aria-controls="vision-details"
+              data-open-label="Visionの全文を読む"
+              data-close-label="Visionの全文を閉じる"
+              hidden
+            >
+              <span class="read-more-label">Visionの全文を閉じる</span>
+              <span class="read-more-arrow" aria-hidden="true">↓</span>
+            </button>
+            <div class="collapsible-content" id="vision-details">
+              <section class="vision-block" aria-labelledby="vision-challenge-title">
+                <h3 id="vision-challenge-title">社会の中にある課題</h3>
+                <p>
+                  少子高齢化に伴う人口減少が進む日本社会の中で、海外にルーツを持つ人々の役割はますます大きくなっています。
+                  その一方で、異なる文化的背景を持つ人を受け入れることへの不安や否定的な見方も一部に見られ、海外にルーツを持つ人が日本社会の中で自らの「居場所」を見出しにくい状況があります。
+                </p>
+
+                <p>
+                  海外にルーツを持つ人は、地域や職場で、主に「働き手」という枠組みで捉えられがちです。
+                  しかし、受け入れ先の社会において経済的な役割だけに限定されることは、社会的孤立につながるおそれがあります。
+                  特に来日初期の人間関係づくりの段階で孤立感が強まると、その後、同国籍に偏ったコミュニティーの形成につながり、相互理解の機会を狭める要因にもなり得ます。
+                </p>
+              </section>
+
+              <section class="vision-block" aria-labelledby="vision-role-title">
+                <h3 id="vision-role-title">ASOBIがつくる関係</h3>
+                <p>
+                  Neo Wellness は、人間関係構築の初期段階において、「労働者」という役割だけではない関わりの中で、人間関係を築くための手段を提供します。
+                </p>
+                <p class="vision-keyline">それが『ASOBI』です。</p>
+              </section>
+
+              <section class="vision-block" aria-labelledby="vision-play-title">
+                <h3 id="vision-play-title">私たちが考える「遊び」</h3>
+                <p>
+                  「遊び」という言葉は、日本語の中で独特の広がりを持つ言葉です。
+                  「娯楽」「ゲーム」「レクリエーション」「余暇活動」といった意味だけでは捉えきれない、人と人との自由な関わりを含んでいます。
+                </p>
+
+                <p>Universal Safety Net 『ASOBI』では、「遊び」を次のように捉えています。</p>
+
+                <ul class="vision-principles">
+                  <li>国籍や経歴の枠から少し離れられること</li>
+                  <li>利益や評価から少し離れられること</li>
+                  <li>個人の固定観念から少し離れられること</li>
+                </ul>
+              </section>
+
+              <section class="vision-block" aria-labelledby="vision-future-title">
+                <h3 id="vision-future-title">目指す社会</h3>
+                <p>
+                  『ASOBI』とは、この三つの要素がそろった時に生まれる、自由でひらかれた状態です。
+                  そこには、新たな関係が生まれ、自分らしさを取り戻していくような再生の意味も込められています。
+                  Neo Wellness は、『ASOBI』を通じて、日本で暮らす人々が出身や文化的背景によって分断するのではなく、自由な空間を共有しながら、壁が生まれにくい社会を目指します。
+                </p>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section concept" id="about" aria-labelledby="about-title">
+        <div class="section-inner">
+          <div class="concept-head">
+            <div>
+              <p class="section-kicker">What is ASOBI?</p>
+              <h2 id="about-title">
+                壁を壊すより、<br class="desktop-break">壁が生まれにくい時間を。
+              </h2>
+            </div>
+            <div>
+              <p class="concept-statement">
+                一緒に食べる、歩く、学ぶ、笑う。
+                ASOBIは、同じ体験をつくることから、
+                立場や背景を越えた関係を育てます。
+              </p>
+              <div class="concept-copy">
+                <p>
+                  活動の中心にあるのは、誰かが一方的に支えるのではなく、
+                  参加者みんなで時間と体験をつくることです。
+                </p>
+                <p>
+                  そこで生まれたつながりが、仕事や暮らしの中で困ったときにも、
+                  支え合える安心へと育っていきます。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="manifesto" aria-label="ASOBIのメッセージ">
+        <div class="manifesto-inner">
+          <div class="manifesto-mark" aria-hidden="true"></div>
+          <blockquote>
+            支える人と、支えられる人ではなく。<br class="desktop-break">
+            同じ時間をつくる、NAKAMAになる。
+          </blockquote>
+          <p>
+            ASOBIは、一方通行の支援ではありません。
+            どんな背景を持つ人にも、新しい発見やつながりが生まれる場所です。
+          </p>
+        </div>
+      </section>
+
+      <section class="section services" id="services" aria-labelledby="services-title">
+        <div class="section-inner">
+          <p class="section-kicker">Our activities</p>
+          <h2 id="services-title">
+            遊ぶ。学ぶ。<br class="desktop-break">暮らしにつなげる。
+          </h2>
+          <p class="service-intro">
+            自然や文化を一緒に体験することと、日本での生活に必要な学びを支えること。
+            二つの活動が行き来しながら、安心できる関係を育てていきます。
+          </p>
+        </div>
+      </section>
+
+      <section class="service-camp" id="star-camp" aria-labelledby="camp-title">
+        <div class="section-inner service">
+          <div class="service-aside">
+            <span class="service-number">ACTIVITY 01</span>
+            <h3 id="camp-title">STAR CAMP</h3>
+            <span class="service-en">Culture &amp; nature experience</span>
+          </div>
+          <div class="service-body">
+            <p class="service-lead">
+              季節、自然、食、文化にふれながら、
+              「次は何をしよう？」をみんなで決めるキャンプです。
+            </p>
+            <button
+              class="read-more-toggle"
+              type="button"
+              aria-expanded="true"
+              aria-controls="star-camp-details"
+              data-open-label="STAR CAMPの全文を読む"
+              data-close-label="STAR CAMPの全文を閉じる"
+              hidden
+            >
+              <span class="read-more-label">STAR CAMPの全文を閉じる</span>
+              <span class="read-more-arrow" aria-hidden="true">↓</span>
+            </button>
+            <div class="service-details collapsible-content" id="star-camp-details">
+              <p>
+                Universal Safety Net 『ASOBI』では、時折『STAR CAMP』を実施しています。言語は、人との関わりの中で使われるものです。そして、人々の営みと言葉が密接に結びついているのが「文化」です。私たちは、文化に触れることなしに、ことばを本当に身につけることは難しいと考えています。
+              </p>
+              <p>
+                例えば、日本語の検定試験は、在留資格や技能資格などの要件を満たすために必要なものです。しかし、教室での学習だけでは、人間関係や文化の中でことばを使う経験が不足しやすいという課題があります。
+              </p>
+              <p>
+                その文化に触れる一つの方法が『STAR CAMP』です。日本には、その地域ならではの四季の風景や生態系、人々の営みと自然との調和、歴史や伝統があります。STAR CAMPは、それらに直接触れ、さまざまな背景を持つ人たちが同じ体験を共有できる場です。
+              </p>
+              <p>
+                地域の食材で料理をしたり、参加者の母国の味を教え合ったり。森や星空の中で過ごす時間には、言葉だけでは届かない文化や暮らしの感覚があります。行き先やその場でする体験も、参加者と一緒に考えながら決めます。
+              </p>
+              <ul class="activity-list" aria-label="STAR CAMPの体験例">
+                <li>郷土料理と母国料理</li>
+                <li>森林浴</li>
+                <li>星空観察</li>
+                <li>釣り</li>
+                <li>ハイキング</li>
+                <li>音楽・ダンス</li>
+                <li>写真・映像</li>
+              </ul>
+            </div>
+          </div>
+          <div class="camp-gallery" aria-label="STAR CAMPの写真">
+            <div class="camp-gallery-main">
+              <figure class="camp-photo">
+                <img
+                  data-asset="star1"
+                  alt="STAR CAMPで参加者が食卓を囲む様子"
+                  loading="lazy"
+                >
+              </figure>
+              <figure class="camp-photo">
+                <img
+                  data-asset="star2"
+                  alt="STAR CAMPで料理を楽しむ様子"
+                  loading="lazy"
+                >
+              </figure>
+            </div>
+            <div class="camp-gallery-row">
+              <figure class="camp-photo">
+                <img
+                  data-asset="star3"
+                  alt="STAR CAMPで屋外の食卓を囲む様子"
+                  loading="lazy"
+                >
+              </figure>
+              <figure class="camp-photo">
+                <img
+                  data-asset="star4"
+                  alt="STAR CAMPで参加者が一緒に料理をする様子"
+                  loading="lazy"
+                >
+              </figure>
+              <figure class="camp-photo">
+                <img
+                  data-asset="star5"
+                  alt="STAR CAMPで桜の季節に地域を歩く様子"
+                  loading="lazy"
+                >
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="service-learning" id="lesson" aria-labelledby="lesson-title">
+        <div class="section-inner service">
+          <div class="service-aside">
+            <span class="service-number">ACTIVITY 02</span>
+            <h3 id="lesson-title">星のレッスン</h3>
+            <span class="service-en">Learning together</span>
+          </div>
+          <div class="service-body">
+            <p class="service-lead">
+              試験に合格するためだけではなく、
+              日本で働き、安心して暮らし、人とつながる力を育てます。
+            </p>
+            <p>
+              日本語や資格取得、仕事のスキルアップを、少人数で伴走します。
+              週1回・約1時間を基本に、オンラインまたは対面で実施。
+              学ぶ人の目標や生活に合わせて、続けられる習慣づくりを一緒に考えます。
+            </p>
+            <ul class="lesson-list" aria-label="星のレッスンの特徴">
+              <li>講師 1〜2名</li>
+              <li>学習者 1〜5名</li>
+              <li>週1回・約1時間</li>
+              <li>オンライン／対面</li>
+              <li>日本語・資格・仕事</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section voice-section" id="story" aria-labelledby="story-title">
+        <div class="section-inner">
+          <p class="section-kicker">A learning story</p>
+          <h2 class="voice-title" id="story-title">
+            <span>星のレッスン</span>
+            <span>参加者の声</span>
+          </h2>
+          <div class="voice-grid">
+            <div class="voice-photos">
+              <img
+                class="voice-photo"
+                data-asset="voice1"
+                alt="星のレッスン参加者が地域の神社を訪れた様子"
+                loading="lazy"
+              >
+              <img
+                class="voice-photo"
+                data-asset="voice2"
+                alt="星のレッスン参加者が子どもと海辺を歩く様子"
+                loading="lazy"
+              >
+            </div>
+            <div class="voice-copy">
+            <blockquote class="case-quote">
+              「フォローがあるから、<br class="desktop-break">仕事も頑張れる。」
+            </blockquote>
+              <p class="case-meta">ベトナム出身・介護職員</p>
+              <button
+                class="read-more-toggle"
+                type="button"
+                aria-expanded="true"
+                aria-controls="story-details"
+                data-open-label="参加者の声を詳しく読む"
+                data-close-label="参加者の声を閉じる"
+                hidden
+              >
+                <span class="read-more-label">参加者の声を閉じる</span>
+                <span class="read-more-arrow" aria-hidden="true">↓</span>
+              </button>
+              <div class="story-details collapsible-content" id="story-details">
+                <h3>学びは、暮らしの景色を変える。</h3>
+                <p>
+                  日本語能力試験N2と介護福祉士資格を目指すベトナム出身の介護職員。
+                  6か月の伴走で、勉強が毎週の習慣になり、仕事や地域での会話にも変化が生まれました。
+                </p>
+                <ul class="case-points">
+                  <li>介護の専門用語や記録の漢字が読めるように</li>
+                  <li>職場での会話と聞き取りに自信がついた</li>
+                  <li>日本人の同僚と食事や外出を楽しむ関係へ</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section team" id="team" aria-labelledby="team-title">
+        <div class="section-inner">
+          <header class="team-head">
+            <div>
+              <p class="section-kicker">Our team</p>
+              <h2 id="team-title">私たちについて</h2>
+            </div>
+            <p class="team-intro">
+              ケア、暮らし、ことば、文化。それぞれの経験を持つ3人が、
+              人と人との関係を育てる活動を一緒につくっています。
+            </p>
+          </header>
+
+          <div class="member-grid" aria-label="運営メンバー">
+            <article class="member-card">
+              <div
+                class="member-photo member-photo-masashi"
+                role="img"
+                aria-label="志津里 雅司の写真"
+              ></div>
+              <div class="member-body">
+                <h3 class="member-name">志津里 雅司</h3>
+                <p class="member-copy">
+                  認知症ケア、高齢者在宅生活支援に長年携わる。
+                </p>
+                <p class="member-copy">
+                  併せて、海外から働きにこられる方の生活支援、
+                  コーチングなどの活動を展開中。
+                </p>
+              </div>
+            </article>
+
+            <article class="member-card">
+              <div
+                class="member-photo member-photo-eriko"
+                role="img"
+                aria-label="志津里 江梨子の写真"
+              ></div>
+              <div class="member-body">
+                <h3 class="member-name">志津里 江梨子</h3>
+                <p class="member-copy">
+                  2児の母。認知症ケア、高齢者在宅支援に長年携わる。
+                </p>
+                <p class="member-copy">
+                  高齢者、海外から働きにこられる方への、
+                  生活環境のコーディネートサービスを展開中。
+                </p>
+              </div>
+            </article>
+
+            <article class="member-card">
+              <div
+                class="member-photo member-photo-yasushi"
+                role="img"
+                aria-label="瀬尾 泰史の写真"
+              ></div>
+              <div class="member-body">
+                <h3 class="member-name">瀬尾 泰史</h3>
+                <p class="member-copy">
+                  海外生活歴18年以上（主にドミニカ共和国）。
+                  日本語、スペイン語の講師。海外から働きに来られる方の支援を実践中。
+                </p>
+                <p class="member-copy">
+                  国際交流、中南米の文化を日本に広める活動を展開中。
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="company-profile" aria-labelledby="company-title">
+            <div>
+              <p class="section-kicker">Organization</p>
+              <h3 id="company-title">法人概要</h3>
+            </div>
+            <dl class="company-details">
+              <div class="company-row">
+                <dt>法人名</dt>
+                <dd>一般社団法人 Neo Wellness</dd>
+              </div>
+              <div class="company-row">
+                <dt>所在地</dt>
+                <dd>愛知県尾張旭市平子町中通21</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="section join" id="join" aria-labelledby="join-title">
+        <div class="section-inner join-inner">
+          <div>
+            <p class="section-kicker">Join us</p>
+            <h2 id="join-title">
+              <span class="heading-line">あなたも、</span>
+              <span class="heading-line nowrap-line">ASOBI NAKAMAに。</span>
+            </h2>
+            <p class="join-copy">
+              参加してみたい、活動を一緒につくりたい、
+              地域や職場で取り組みたい。どんな関わり方でも大丈夫です。
+              まずは気軽にご連絡ください。
+            </p>
+          </div>
+          <ul class="contact-list">
+            <li>
+              <a href="mailto:neowellness2024@gmail.com">
+                <span>
+                  <span class="contact-label">Email</span><br>
+                  neowellness2024@gmail.com
+                </span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+819017284013">
+                <span>
+                  <span class="contact-label">Phone</span><br>
+                  090-1728-4013
+                </span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/groups/neowellness/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>
+                  <span class="contact-label">Community</span><br>
+                  Facebook group
+                </span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="section-inner contact-form-wrap">
+          <div class="contact-form-head">
+            <h3>お問い合わせ</h3>
+            <p>
+              活動への参加、連携のご相談、その他のご質問をお送りください。
+              入力内容をもとにメールを作成します。
+            </p>
+          </div>
+          <form class="contact-form" id="contact-form">
+            <div class="form-field">
+              <label for="contact-name">
+                お名前<span class="form-required">必須</span>
+              </label>
+              <input id="contact-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="form-field">
+              <label for="contact-email">
+                メールアドレス<span class="form-required">必須</span>
+              </label>
+              <input
+                id="contact-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                inputmode="email"
+                required
+              >
+            </div>
+            <div class="form-field form-field-full">
+              <label for="contact-topic">お問い合わせ内容</label>
+              <select id="contact-topic" name="topic">
+                <option value="活動への参加について">活動への参加について</option>
+                <option value="連携・協働について">連携・協働について</option>
+                <option value="星のレッスンについて">星のレッスンについて</option>
+                <option value="STAR CAMPについて">STAR CAMPについて</option>
+                <option value="その他">その他</option>
+              </select>
+            </div>
+            <div class="form-field form-field-full">
+              <label for="contact-message">
+                メッセージ<span class="form-required">必須</span>
+              </label>
+              <textarea id="contact-message" name="message" required></textarea>
+            </div>
+            <button class="contact-submit" type="submit">メールを作成する</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div>
+          <strong>一般社団法人 Neo Wellness / ASOBI</strong>
+          <p>Universal Safety Net through play, learning and connection.</p>
+        </div>
+        <p>© <span id="year">2026</span> Neo Wellness</p>
+      </div>
+    </footer>
+
+    <script src="asobi-assets-main.js"></script>
+    <script src="asobi-assets-gallery.js"></script>
+    <script src="asobi-members.js?v=20260721"></script>
+    <script>
+      document.querySelectorAll("[data-asset]").forEach((image) => {
+        const source = window.ASOBI_ASSETS?.[image.dataset.asset];
+        if (source) {
+          image.src = source;
+        }
+      });
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      const siteHeader = document.querySelector(".site-header");
+      const backToTop = document.querySelector(".back-to-top");
+      const navToggle = document.querySelector(".nav-toggle");
+      const navLinks = document.getElementById("site-nav-links");
+
+      const updateScrollUi = () => {
+        siteHeader.classList.toggle("is-scrolled", window.scrollY > 36);
+        backToTop.classList.toggle("is-visible", window.scrollY > 560);
+      };
+
+      window.addEventListener("scroll", updateScrollUi, { passive: true });
+      updateScrollUi();
+
+      const closeMenu = () => {
+        navLinks.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+        navToggle.setAttribute("aria-label", "メニューを開く");
+      };
+
+      navToggle.addEventListener("click", () => {
+        const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+        navLinks.classList.toggle("is-open", !isOpen);
+        navToggle.setAttribute("aria-expanded", String(!isOpen));
+        navToggle.setAttribute("aria-label", isOpen ? "メニューを開く" : "メニューを閉じる");
+      });
+
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", closeMenu);
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          closeMenu();
+        }
+      });
+
+      const readingMedia = window.matchMedia("(max-width: 600px)");
+      const readingToggles = document.querySelectorAll(".read-more-toggle");
+
+      const setReadingState = (button, expanded) => {
+        const content = document.getElementById(button.getAttribute("aria-controls"));
+        const label = button.querySelector(".read-more-label");
+
+        content.hidden = !expanded;
+        button.setAttribute("aria-expanded", String(expanded));
+        label.textContent = expanded ? button.dataset.closeLabel : button.dataset.openLabel;
+      };
+
+      const configureReadingSections = () => {
+        readingToggles.forEach((button) => {
+          button.hidden = !readingMedia.matches;
+          setReadingState(button, !readingMedia.matches);
+        });
+      };
+
+      readingToggles.forEach((button) => {
+        button.addEventListener("click", () => {
+          const expanded = button.getAttribute("aria-expanded") === "true";
+          setReadingState(button, !expanded);
+        });
+      });
+
+      if (typeof readingMedia.addEventListener === "function") {
+        readingMedia.addEventListener("change", configureReadingSections);
+      } else {
+        readingMedia.addListener(configureReadingSections);
+      }
+      configureReadingSections();
+
+      document.getElementById("contact-form").addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const form = new FormData(event.currentTarget);
+        const topic = form.get("topic");
+        const subject = `[ASOBIお問い合わせ] ${topic}`;
+        const body = [
+          `お名前: ${form.get("name")}`,
+          `メールアドレス: ${form.get("email")}`,
+          `お問い合わせ内容: ${topic}`,
+          "",
+          form.get("message"),
+        ].join("\n");
+
+        window.location.href = `mailto:neowellness2024@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      });
+    </script>
+  </body>
+</html>
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ASOBI | 遊びから、関係がはじまる。</title>
+    <meta
+      name="description"
+      content="ASOBIは、異なる文化や背景を持つ人たちが、遊び・学び・文化体験を通して関係を育てるUniversal Safety Netです。"
+    >
+    <meta name="theme-color" content="#f4f1e8">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ASOBI | 遊びから、関係がはじまる。">
+    <meta
+      property="og:description"
+      content="異なる文化や背景を持つ人たちが、遊び・学び・文化体験を通して関係を育てるUniversal Safety Net。"
+    >
+    <meta property="og:url" content="https://usn-asobi.jp/">
+    <meta
+      property="og:image"
+      content="https://static.wixstatic.com/media/e4f321_dfc1ff9ac6c743e5b3df5d0c283656d8~mv2.jpg/v1/fill/w_2304,h_1296,al_c,q_90,enc_avif,quality_auto/e4f321_dfc1ff9ac6c743e5b3df5d0c283656d8~mv2.jpg"
+    >
+    <meta
+      property="og:image:alt"
+      content="夕暮れの大きな木の下で、さまざまな人たちが焚き火を囲むASOBIの風景"
+    >
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ASOBI | 遊びから、関係がはじまる。">
+    <meta
+      name="twitter:description"
+      content="異なる文化や背景を持つ人たちが、遊び・学び・文化体験を通して関係を育てるUniversal Safety Net。"
+    >
+    <meta
+      name="twitter:image"
+      content="https://static.wixstatic.com/media/e4f321_dfc1ff9ac6c743e5b3df5d0c283656d8~mv2.jpg/v1/fill/w_2304,h_1296,al_c,q_90,enc_avif,quality_auto/e4f321_dfc1ff9ac6c743e5b3df5d0c283656d8~mv2.jpg"
+    >
+    <link rel="icon" href="/favicon.svg?v=asobi-logo-round-20260721" type="image/svg+xml">
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #18221e;
+        --ink-soft: #4f5d56;
+        --paper: #f4f1e8;
+        --white: #fffef9;
+        --forest: #164b3b;
+        --forest-deep: #0b2e24;
+        --coral: #e35d45;
+        --yellow: #f4c95d;
+        --sky: #c9e6e1;
+        --line: rgba(24, 34, 30, 0.16);
+        --max: 1180px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 76px;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--white);
+        font-family:
+          "Hiragino Sans",
+          "Yu Gothic",
+          "YuGothic",
+          "Noto Sans JP",
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        line-height: 1.8;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      button,
+      a {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      :focus-visible {
+        outline: 3px solid var(--yellow);
+        outline-offset: 4px;
+      }
+
+      .skip-link {
+        position: fixed;
+        z-index: 100;
+        top: 12px;
+        left: 12px;
+        padding: 10px 16px;
+        background: var(--white);
+        border: 2px solid var(--ink);
+        transform: translateY(-160%);
+      }
+
+      .skip-link:focus {
+        transform: translateY(0);
+      }
+
+      .site-header {
+        position: fixed;
+        z-index: 50;
+        top: 0;
+        left: 0;
+        width: 100%;
+        color: #fff;
+        background: transparent;
+        transition:
+          background 180ms ease,
+          box-shadow 180ms ease;
+      }
+
+      .site-header.is-scrolled {
+        background: rgba(11, 46, 36, 0.96);
+        box-shadow: 0 8px 28px rgba(5, 24, 18, 0.18);
+        backdrop-filter: blur(10px);
+      }
+
+      .nav {
+        width: min(calc(100% - 48px), var(--max));
+        min-height: 82px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.34);
+        transition: min-height 180ms ease, border-color 180ms ease;
+      }
+
+      .site-header.is-scrolled .nav {
+        min-height: 66px;
+        border-color: transparent;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .brand-logo {
+        width: 48px;
+        height: 48px;
+        flex: 0 0 auto;
+        object-fit: cover;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.65);
+        transition: width 180ms ease, height 180ms ease;
+      }
+
+      .site-header.is-scrolled .brand-logo {
+        width: 42px;
+        height: 42px;
+      }
+
+      .brand-name {
+        font-size: 1.05rem;
+        font-weight: 800;
+        line-height: 1;
+      }
+
+      .brand-sub {
+        display: block;
+        margin-top: 5px;
+        font-size: 0.58rem;
+        font-weight: 700;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 34px;
+      }
+
+      .nav-links a {
+        font-size: 0.82rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .nav-links a:not(.nav-join) {
+        padding-block: 10px;
+        border-bottom: 1px solid transparent;
+      }
+
+      .nav-links a:not(.nav-join):hover {
+        border-color: currentColor;
+      }
+
+      .nav-join {
+        display: inline-flex;
+        min-height: 42px;
+        align-items: center;
+        padding: 0 18px;
+        color: var(--ink);
+        background: var(--yellow);
+        border-radius: 4px;
+      }
+
+      .nav-mobile-actions {
+        display: none;
+      }
+
+      .back-to-top {
+        position: fixed;
+        z-index: 45;
+        right: 20px;
+        bottom: 20px;
+        width: 48px;
+        height: 48px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        background: var(--forest-deep);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        box-shadow: 0 10px 28px rgba(5, 24, 18, 0.22);
+        font-size: 1.25rem;
+        line-height: 1;
+        text-decoration: none;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(12px);
+        transition:
+          opacity 180ms ease,
+          visibility 180ms ease,
+          transform 180ms ease,
+          background 180ms ease;
+      }
+
+      .back-to-top:hover {
+        background: var(--forest);
+      }
+
+      .back-to-top.is-visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .hero {
+        position: relative;
+        min-height: min(780px, 86svh);
+        display: flex;
+        align-items: flex-end;
+        overflow: hidden;
+        color: #fff;
+        background: var(--forest-deep);
+      }
+
+      .hero-media,
+      .hero-shade {
+        position: absolute;
+        inset: 0;
+      }
+
+      .hero-media {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .hero-shade {
+        background: rgba(6, 25, 20, 0.44);
+      }
+
+      .hero-shade::after {
+        content: "";
+        position: absolute;
+        inset: 0 auto 0 0;
+        width: 62%;
+        background: rgba(4, 24, 18, 0.34);
+      }
+
+      .hero-inner {
+        position: relative;
+        z-index: 2;
+        width: min(calc(100% - 48px), var(--max));
+        margin: 0 auto;
+        padding: 172px 0 84px;
+      }
+
+      .eyebrow {
+        margin: 0 0 18px;
+        font-size: 0.78rem;
+        font-weight: 800;
+        line-height: 1.4;
+        text-transform: uppercase;
+      }
+
+      .hero .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--yellow);
+      }
+
+      .hero .eyebrow::before {
+        content: "";
+        width: 32px;
+        height: 2px;
+        background: currentColor;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 760px;
+        margin-bottom: 22px;
+        font-size: 5.4rem;
+        font-weight: 800;
+        line-height: 1.12;
+      }
+
+      .heading-line {
+        display: block;
+      }
+
+      .nowrap-line {
+        white-space: nowrap;
+      }
+
+      .hero-lead {
+        max-width: 620px;
+        margin-bottom: 34px;
+        font-size: 1.15rem;
+        line-height: 1.9;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 52px;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        padding: 0 22px;
+        border: 2px solid transparent;
+        border-radius: 4px;
+        font-size: 0.92rem;
+        font-weight: 800;
+        line-height: 1.3;
+        text-decoration: none;
+        transition:
+          transform 160ms ease,
+          background 160ms ease,
+          color 160ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+      }
+
+      .button-primary {
+        color: var(--ink);
+        background: var(--yellow);
+      }
+
+      .button-ghost {
+        color: #fff;
+        border-color: rgba(255, 255, 255, 0.72);
+        background: rgba(3, 22, 17, 0.14);
+      }
+
+      .button-arrow {
+        font-size: 1.15rem;
+        line-height: 1;
+      }
+
+      .intro-strip {
+        color: #fff;
+        background: var(--coral);
+      }
+
+      .intro-strip-inner {
+        width: min(calc(100% - 48px), var(--max));
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 48px;
+        align-items: center;
+        padding: 28px 0;
+      }
+
+      .intro-strip-label {
+        font-size: 0.75rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .intro-strip-copy {
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: 700;
+        line-height: 1.65;
+      }
+
+      .vision {
+        position: relative;
+        overflow: hidden;
+        background: var(--white);
+      }
+
+      .vision::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: max(24px, calc((100% - var(--max)) / 2));
+        width: 1px;
+        height: 88px;
+        background: var(--coral);
+      }
+
+      .vision-layout {
+        display: grid;
+        grid-template-columns: minmax(220px, 0.68fr) minmax(0, 1.32fr);
+        gap: clamp(54px, 9vw, 124px);
+        align-items: start;
+      }
+
+      .vision-heading {
+        padding-top: 28px;
+      }
+
+      .vision h2 {
+        margin-bottom: 22px;
+        font-size: 4.5rem;
+        line-height: 1;
+      }
+
+      .vision-label {
+        display: block;
+        color: var(--ink-soft);
+        font-size: 0.74rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .vision-copy {
+        max-width: 760px;
+        color: var(--ink-soft);
+        font-size: 1rem;
+      }
+
+      .vision-copy p {
+        margin-bottom: 1.5em;
+      }
+
+      .mobile-reading-summary,
+      .read-more-toggle {
+        display: none;
+      }
+
+      .collapsible-content[hidden] {
+        display: none;
+      }
+
+      .vision-block {
+        padding: 38px 0 22px;
+        border-top: 1px solid var(--line);
+      }
+
+      .vision-block:first-child {
+        padding-top: 0;
+        border-top: 0;
+      }
+
+      .vision-block:last-child {
+        padding-bottom: 0;
+      }
+
+      .vision-block h3 {
+        margin-bottom: 22px;
+        color: var(--ink);
+        font-size: 1.3rem;
+        line-height: 1.5;
+      }
+
+      .vision-copy .vision-keyline {
+        margin: 1.8em 0 0;
+        color: var(--forest);
+        font-size: clamp(1.7rem, 3vw, 2.7rem);
+        font-weight: 800;
+        line-height: 1.55;
+      }
+
+      .vision-principles {
+        margin: 2.2em 0 0;
+        padding: 0;
+        list-style: none;
+        border-top: 1px solid var(--line);
+      }
+
+      .vision-principles li {
+        position: relative;
+        padding: 18px 16px 18px 42px;
+        color: var(--ink);
+        font-weight: 700;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .vision-principles li::before {
+        content: "◇";
+        position: absolute;
+        left: 10px;
+        color: var(--coral);
+      }
+
+      .section {
+        padding: clamp(86px, 10vw, 150px) 0;
+      }
+
+      .section-inner {
+        width: min(calc(100% - 48px), var(--max));
+        margin: 0 auto;
+      }
+
+      .section-kicker {
+        margin: 0 0 18px;
+        color: var(--coral);
+        font-size: 0.76rem;
+        font-weight: 800;
+        line-height: 1.4;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        margin-bottom: 30px;
+        font-size: 3.4rem;
+        line-height: 1.25;
+      }
+
+      .concept {
+        background: var(--paper);
+      }
+
+      .concept-head {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        gap: clamp(48px, 8vw, 110px);
+        align-items: start;
+      }
+
+      .concept-statement {
+        margin: 0 0 32px;
+        font-size: 1.35rem;
+        font-weight: 700;
+        line-height: 2;
+      }
+
+      .concept h2 {
+        font-size: 2.3rem;
+      }
+
+      .concept-copy {
+        color: var(--ink-soft);
+        font-size: 1rem;
+      }
+
+      .concept-copy p:last-child {
+        margin-bottom: 0;
+      }
+
+      .manifesto {
+        color: #fff;
+        background: var(--forest-deep);
+      }
+
+      .manifesto-inner {
+        width: min(calc(100% - 48px), 900px);
+        margin: 0 auto;
+        padding: clamp(80px, 10vw, 144px) 0;
+        text-align: center;
+      }
+
+      .manifesto-mark {
+        width: 10px;
+        height: 10px;
+        margin: 0 auto 30px;
+        background: var(--yellow);
+        transform: rotate(45deg);
+      }
+
+      .manifesto blockquote {
+        margin: 0;
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 1.65;
+      }
+
+      .manifesto p {
+        max-width: 680px;
+        margin: 30px auto 0;
+        color: rgba(255, 255, 255, 0.72);
+      }
+
+      .services {
+        padding-bottom: 0;
+      }
+
+      .service-intro {
+        max-width: 720px;
+        color: var(--ink-soft);
+      }
+
+      .service {
+        display: grid;
+        grid-template-columns: minmax(260px, 0.7fr) minmax(0, 1.3fr);
+        margin-top: clamp(58px, 8vw, 100px);
+        border-top: 1px solid var(--line);
+      }
+
+      .service-aside {
+        position: relative;
+        padding: 38px 48px 38px 0;
+        border-right: 1px solid var(--line);
+      }
+
+      .service-number {
+        color: var(--coral);
+        font-size: 0.76rem;
+        font-weight: 800;
+      }
+
+      .service-aside h3 {
+        margin: 70px 0 8px;
+        font-size: 2.5rem;
+        line-height: 1.25;
+      }
+
+      .service-en {
+        color: var(--ink-soft);
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      .service-body {
+        padding: 38px 0 74px 64px;
+      }
+
+      .service-lead {
+        max-width: 740px;
+        margin-bottom: 36px;
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: 1.9;
+      }
+
+      .service-body > p:not(.service-lead),
+      .service-details > p {
+        max-width: 780px;
+        color: var(--ink-soft);
+      }
+
+      .activity-list,
+      .lesson-list {
+        margin: 32px 0 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        list-style: none;
+      }
+
+      .activity-list li,
+      .lesson-list li {
+        padding: 8px 14px;
+        border: 1px solid var(--line);
+        border-radius: 3px;
+        color: var(--ink-soft);
+        background: #fff;
+        font-size: 0.84rem;
+        font-weight: 700;
+      }
+
+      .service-camp {
+        background: #f7eee7;
+      }
+
+      .service-camp .service {
+        border-color: rgba(227, 93, 69, 0.3);
+      }
+
+      .camp-gallery {
+        grid-column: 1 / -1;
+        display: grid;
+        gap: 12px;
+        padding: 0 0 96px;
+      }
+
+      .camp-gallery-main,
+      .camp-gallery-row {
+        display: grid;
+        gap: 12px;
+      }
+
+      .camp-gallery-main {
+        height: 520px;
+        grid-template-columns: minmax(0, 1.55fr) minmax(260px, 0.75fr);
+      }
+
+      .camp-gallery-row {
+        height: 260px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .camp-photo {
+        margin: 0;
+        min-width: 0;
+        overflow: hidden;
+        background: rgba(24, 34, 30, 0.08);
+      }
+
+      .camp-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .camp-gallery-main .camp-photo:first-child img {
+        object-position: center 42%;
+      }
+
+      .camp-gallery-row .camp-photo:last-child img {
+        object-position: center 32%;
+      }
+
+      .service-learning {
+        background: #e5f1ee;
+      }
+
+      .service-learning .service {
+        margin-top: 0;
+        border-color: rgba(22, 75, 59, 0.24);
+      }
+
+      .voice-section {
+        background: var(--white);
+      }
+
+      .voice-title {
+        max-width: 900px;
+        margin: 0 0 62px;
+        font-size: 4.25rem;
+        line-height: 1.25;
+      }
+
+      .voice-title span {
+        display: block;
+      }
+
+      .voice-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+        gap: clamp(48px, 7vw, 96px);
+        align-items: center;
+      }
+
+      .voice-photos {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        align-items: start;
+      }
+
+      .voice-photo {
+        width: 100%;
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+        background: rgba(24, 34, 30, 0.08);
+      }
+
+      .voice-photo:last-child {
+        margin-top: 56px;
+      }
+
+      .case-quote {
+        margin: 0;
+        padding-top: 24px;
+        border-top: 6px solid var(--yellow);
+        font-size: 2.35rem;
+        font-weight: 800;
+        line-height: 1.5;
+      }
+
+      .case-meta {
+        margin: 18px 0 0;
+        color: var(--ink-soft);
+        font-size: 0.88rem;
+        font-weight: 700;
+      }
+
+      .voice-copy h3 {
+        margin: 48px 0 18px;
+        font-size: 1.85rem;
+        line-height: 1.5;
+      }
+
+      .voice-copy > p:not(.case-meta),
+      .story-details > p {
+        margin: 0;
+        color: var(--ink-soft);
+      }
+
+      .case-points {
+        margin: 28px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .case-points li {
+        position: relative;
+        padding: 13px 0 13px 28px;
+        border-top: 1px solid var(--line);
+      }
+
+      .case-points li::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 2px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--coral);
+        transform: translateY(-50%);
+      }
+
+      .team {
+        background: #eef1eb;
+      }
+
+      .team-head {
+        display: grid;
+        grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1.28fr);
+        gap: clamp(40px, 8vw, 110px);
+        align-items: end;
+      }
+
+      .team-head h2 {
+        margin-bottom: 0;
+      }
+
+      .team-intro {
+        max-width: 700px;
+        margin: 0;
+        color: var(--ink-soft);
+      }
+
+      .member-grid {
+        margin-top: clamp(50px, 7vw, 84px);
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .member-card {
+        min-width: 0;
+        overflow: hidden;
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: 6px;
+      }
+
+      .member-photo {
+        width: min(72%, 300px);
+        aspect-ratio: 0.9 / 1;
+        margin: 26px auto 0;
+        background-color: rgba(24, 34, 30, 0.08);
+        background-image: var(--member-source);
+        background-repeat: no-repeat;
         background-size: 400% auto;
         border-radius: 6px;
       }
