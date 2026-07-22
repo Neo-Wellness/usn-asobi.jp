@@ -859,6 +859,126 @@
         transform: translateY(-50%);
       }
 
+      .team {
+        background: #eef1eb;
+      }
+
+      .team-head {
+        display: grid;
+        grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1.28fr);
+        gap: clamp(40px, 8vw, 110px);
+        align-items: end;
+      }
+
+      .team-head h2 {
+        margin-bottom: 0;
+      }
+
+      .team-intro {
+        max-width: 700px;
+        margin: 0;
+        color: var(--ink-soft);
+      }
+
+      .member-grid {
+        margin-top: clamp(50px, 7vw, 84px);
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .member-card {
+        min-width: 0;
+        overflow: hidden;
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: 6px;
+      }
+
+      .member-photo {
+        width: 100%;
+        aspect-ratio: 1 / 1.06;
+        background-color: rgba(24, 34, 30, 0.08);
+        background-image: var(--member-source);
+        background-repeat: no-repeat;
+        background-size: 400% auto;
+      }
+
+      .member-photo-masashi {
+        background-position: 3% 15%;
+      }
+
+      .member-photo-eriko {
+        background-position: 48.4% 15%;
+      }
+
+      .member-photo-yasushi {
+        background-position: 93.3% 15%;
+      }
+
+      .member-body {
+        padding: 28px 26px 30px;
+      }
+
+      .member-name {
+        margin: 0 0 22px;
+        color: var(--forest-deep);
+        font-size: 1.5rem;
+        line-height: 1.4;
+      }
+
+      .member-copy {
+        margin: 0;
+        color: var(--ink-soft);
+        font-size: 0.92rem;
+        line-height: 1.9;
+      }
+
+      .member-copy + .member-copy {
+        margin-top: 16px;
+      }
+
+      .company-profile {
+        margin-top: clamp(70px, 9vw, 112px);
+        padding-top: clamp(42px, 6vw, 64px);
+        display: grid;
+        grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.28fr);
+        gap: clamp(40px, 8vw, 110px);
+        border-top: 1px solid var(--line);
+      }
+
+      .company-profile h3 {
+        margin: 0;
+        font-size: 1.75rem;
+        line-height: 1.4;
+      }
+
+      .company-details {
+        margin: 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .company-row {
+        min-height: 72px;
+        display: grid;
+        grid-template-columns: 120px minmax(0, 1fr);
+        gap: 24px;
+        align-items: center;
+        padding: 16px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .company-row dt {
+        color: var(--ink-soft);
+        font-size: 0.76rem;
+        font-weight: 800;
+      }
+
+      .company-row dd {
+        margin: 0;
+        font-weight: 700;
+      }
+
       .join {
         color: #fff;
         background: var(--forest);
@@ -1205,6 +1325,8 @@
         .concept-head,
         .service,
         .voice-grid,
+        .team-head,
+        .company-profile,
         .join-inner {
           grid-template-columns: 1fr;
         }
@@ -1249,6 +1371,10 @@
 
         .voice-grid {
           gap: 62px;
+        }
+
+        .member-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
         .join-inner {
@@ -1477,6 +1603,21 @@
           font-size: 1.45rem;
         }
 
+        .member-grid {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+
+        .member-body {
+          padding: 24px 20px 26px;
+        }
+
+        .company-row {
+          grid-template-columns: 1fr;
+          gap: 4px;
+          align-items: start;
+        }
+
         .case-meta {
           margin-top: 14px;
         }
@@ -1570,6 +1711,7 @@
           <a href="#about">ASOBIとは</a>
           <a href="#services">活動</a>
           <a href="#story">参加者の声</a>
+          <a href="#team">私たち</a>
           <a class="nav-join" href="#join">NAKAMAになる</a>
         </div>
         <div class="nav-mobile-actions">
@@ -1942,6 +2084,94 @@
         </div>
       </section>
 
+      <section class="section team" id="team" aria-labelledby="team-title">
+        <div class="section-inner">
+          <header class="team-head">
+            <div>
+              <p class="section-kicker">Our team</p>
+              <h2 id="team-title">私たちについて</h2>
+            </div>
+            <p class="team-intro">
+              ケア、暮らし、ことば、文化。それぞれの経験を持つ3人が、
+              人と人との関係を育てる活動を一緒につくっています。
+            </p>
+          </header>
+
+          <div class="member-grid" aria-label="運営メンバー">
+            <article class="member-card">
+              <div
+                class="member-photo member-photo-masashi"
+                role="img"
+                aria-label="志津里 雅司の写真"
+              ></div>
+              <div class="member-body">
+                <h3 class="member-name">志津里 雅司</h3>
+                <p class="member-copy">
+                  認知症ケア、高齢者在宅生活支援に長年携わる。
+                </p>
+                <p class="member-copy">
+                  併せて、海外から働きにこられる方の生活支援、
+                  コーチングなどの活動を展開中。
+                </p>
+              </div>
+            </article>
+
+            <article class="member-card">
+              <div
+                class="member-photo member-photo-eriko"
+                role="img"
+                aria-label="志津里 江梨子の写真"
+              ></div>
+              <div class="member-body">
+                <h3 class="member-name">志津里 江梨子</h3>
+                <p class="member-copy">
+                  2児の母。認知症ケア、高齢者在宅支援に長年携わる。
+                </p>
+                <p class="member-copy">
+                  高齢者、海外から働きにこられる方への、
+                  生活環境のコーディネートサービスを展開中。
+                </p>
+              </div>
+            </article>
+
+            <article class="member-card">
+              <div
+                class="member-photo member-photo-yasushi"
+                role="img"
+                aria-label="瀬尾 泰史の写真"
+              ></div>
+              <div class="member-body">
+                <h3 class="member-name">瀬尾 泰史</h3>
+                <p class="member-copy">
+                  海外生活歴18年以上（主にドミニカ共和国）。
+                  日本語、スペイン語の講師。海外から働きに来られる方の支援を実践中。
+                </p>
+                <p class="member-copy">
+                  国際交流、中南米の文化を日本に広める活動を展開中。
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="company-profile" aria-labelledby="company-title">
+            <div>
+              <p class="section-kicker">Organization</p>
+              <h3 id="company-title">法人概要</h3>
+            </div>
+            <dl class="company-details">
+              <div class="company-row">
+                <dt>法人名</dt>
+                <dd>一般社団法人 Neo Wellness</dd>
+              </div>
+              <div class="company-row">
+                <dt>所在地</dt>
+                <dd>愛知県尾張旭市平子町中通21</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
       <section class="section join" id="join" aria-labelledby="join-title">
         <div class="section-inner join-inner">
           <div>
@@ -2043,7 +2273,7 @@
     <footer class="footer">
       <div class="footer-inner">
         <div>
-          <strong>Neo Wellness / ASOBI</strong>
+          <strong>一般社団法人 Neo Wellness / ASOBI</strong>
           <p>Universal Safety Net through play, learning and connection.</p>
         </div>
         <p>© <span id="year">2026</span> Neo Wellness</p>
@@ -2052,6 +2282,7 @@
 
     <script src="asobi-assets-main.js"></script>
     <script src="asobi-assets-gallery.js"></script>
+    <script src="asobi-members.js?v=20260721"></script>
     <script>
       document.querySelectorAll("[data-asset]").forEach((image) => {
         const source = window.ASOBI_ASSETS?.[image.dataset.asset];
