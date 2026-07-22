@@ -865,9 +865,9 @@
 
       .team-head {
         display: grid;
-        grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1.28fr);
-        gap: clamp(40px, 8vw, 110px);
-        align-items: end;
+        grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
+        gap: clamp(36px, 6vw, 82px);
+        align-items: start;
       }
 
       .team-head h2 {
@@ -875,13 +875,16 @@
       }
 
       .team-intro {
-        max-width: 700px;
+        max-width: 620px;
         margin: 0;
+        padding-top: 34px;
+        justify-self: end;
         color: var(--ink-soft);
+        line-height: 2;
       }
 
       .member-grid {
-        margin-top: clamp(50px, 7vw, 84px);
+        margin-top: clamp(38px, 5vw, 58px);
         display: grid;
         grid-template-columns: 1fr;
         border-top: 1px solid var(--line);
@@ -936,6 +939,15 @@
         color: var(--forest-deep);
         font-size: 1.35rem;
         line-height: 1.4;
+      }
+
+      .member-reading {
+        display: block;
+        margin-top: 6px;
+        color: var(--ink-soft);
+        font-size: 0.72rem;
+        font-weight: 500;
+        line-height: 1.5;
       }
 
       .member-copy {
@@ -1343,6 +1355,16 @@
           grid-template-columns: 1fr;
         }
 
+        .team-head {
+          gap: 20px;
+        }
+
+        .team-intro {
+          max-width: 680px;
+          padding-top: 0;
+          justify-self: start;
+        }
+
         .vision-layout {
           gap: 34px;
         }
@@ -1638,6 +1660,11 @@
         .member-name {
           margin-bottom: 12px;
           font-size: 1.18rem;
+        }
+
+        .member-reading {
+          margin-top: 4px;
+          font-size: 0.68rem;
         }
 
         .member-copy {
@@ -2125,7 +2152,7 @@
               <h2 id="team-title">私たちについて</h2>
             </div>
             <p class="team-intro">
-              ケア、暮らし、ことば、文化。それぞれの経験を持つ3人が、
+              ケア、暮らし、ことば、文化。それぞれの経験を持つ3人が、<br>
               人と人との関係を育てる活動を一緒につくっています。
             </p>
           </header>
@@ -2138,7 +2165,10 @@
                 aria-label="志津里 雅司の写真"
               ></div>
               <div class="member-body">
-                <h3 class="member-name">志津里 雅司</h3>
+                <h3 class="member-name">
+                  志津里 雅司
+                  <span class="member-reading">（しずり　まさし）</span>
+                </h3>
                 <p class="member-copy">
                   認知症ケア、高齢者在宅生活支援に長年携わる。
                 </p>
@@ -2156,7 +2186,10 @@
                 aria-label="志津里 江梨子の写真"
               ></div>
               <div class="member-body">
-                <h3 class="member-name">志津里 江梨子</h3>
+                <h3 class="member-name">
+                  志津里 江梨子
+                  <span class="member-reading">（しずり　えりこ）</span>
+                </h3>
                 <p class="member-copy">
                   2児の母。認知症ケア、高齢者在宅支援に長年携わる。
                 </p>
@@ -2174,7 +2207,10 @@
                 aria-label="瀬尾 泰史の写真"
               ></div>
               <div class="member-body">
-                <h3 class="member-name">瀬尾 泰史</h3>
+                <h3 class="member-name">
+                  瀬尾 泰史
+                  <span class="member-reading">（せお　やすし）</span>
+                </h3>
                 <p class="member-copy">
                   海外生活歴18年以上（主にドミニカ共和国）。
                   日本語、スペイン語の講師。海外から働きに来られる方の支援を実践中。
