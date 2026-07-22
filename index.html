@@ -883,27 +883,29 @@
       .member-grid {
         margin-top: clamp(50px, 7vw, 84px);
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 18px;
+        grid-template-columns: 1fr;
+        border-top: 1px solid var(--line);
       }
 
       .member-card {
         min-width: 0;
-        overflow: hidden;
-        background: var(--white);
-        border: 1px solid var(--line);
-        border-radius: 6px;
+        display: grid;
+        grid-template-columns: 122px minmax(0, 1fr);
+        gap: clamp(28px, 4vw, 54px);
+        align-items: start;
+        padding: 32px 0;
+        border-bottom: 1px solid var(--line);
       }
 
       .member-photo {
-        width: min(72%, 300px);
+        width: 122px;
         aspect-ratio: 0.9 / 1;
-        margin: 26px auto 0;
+        margin: 0;
         background-color: rgba(24, 34, 30, 0.08);
         background-image: var(--member-source);
         background-repeat: no-repeat;
         background-size: 430% auto;
-        border-radius: 30px;
+        border-radius: 18px;
       }
 
       .member-photo-masashi {
@@ -919,17 +921,25 @@
       }
 
       .member-body {
-        padding: 28px 26px 30px;
+        min-width: 0;
+        padding-top: 2px;
+        display: grid;
+        grid-template-columns: minmax(150px, 0.34fr) minmax(0, 1fr);
+        column-gap: clamp(28px, 5vw, 68px);
+        align-items: start;
       }
 
       .member-name {
-        margin: 0 0 22px;
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        margin: 0;
         color: var(--forest-deep);
-        font-size: 1.5rem;
+        font-size: 1.35rem;
         line-height: 1.4;
       }
 
       .member-copy {
+        grid-column: 2;
         margin: 0;
         color: var(--ink-soft);
         font-size: 0.92rem;
@@ -937,7 +947,7 @@
       }
 
       .member-copy + .member-copy {
-        margin-top: 16px;
+        margin-top: 10px;
       }
 
       .company-profile {
@@ -1376,7 +1386,7 @@
         }
 
         .member-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
+          grid-template-columns: 1fr;
         }
 
         .join-inner {
@@ -1607,11 +1617,32 @@
 
         .member-grid {
           grid-template-columns: 1fr;
-          gap: 16px;
+        }
+
+        .member-card {
+          grid-template-columns: 88px minmax(0, 1fr);
+          gap: 18px;
+          padding: 24px 0;
+        }
+
+        .member-photo {
+          width: 88px;
+          border-radius: 14px;
         }
 
         .member-body {
-          padding: 24px 20px 26px;
+          display: block;
+          padding: 0;
+        }
+
+        .member-name {
+          margin-bottom: 12px;
+          font-size: 1.18rem;
+        }
+
+        .member-copy {
+          font-size: 0.86rem;
+          line-height: 1.8;
         }
 
         .company-row {
