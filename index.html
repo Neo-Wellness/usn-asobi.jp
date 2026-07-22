@@ -207,6 +207,11 @@
         border-color: currentColor;
       }
 
+      .nav-links a:not(.nav-join).is-active {
+        color: var(--yellow);
+        border-color: currentColor;
+      }
+
       .nav-join {
         display: inline-flex;
         min-height: 42px;
@@ -215,6 +220,11 @@
         color: var(--ink);
         background: var(--yellow);
         border-radius: 4px;
+      }
+
+      .nav-join.is-active,
+      .nav-mobile-join.is-active {
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.92);
       }
 
       .nav-mobile-actions {
@@ -542,6 +552,11 @@
         padding: clamp(86px, 10vw, 150px) 0;
       }
 
+      main section[id],
+      #contact-form {
+        scroll-margin-top: 82px;
+      }
+
       .section-inner {
         width: min(calc(100% - 48px), var(--max));
         margin: 0 auto;
@@ -683,6 +698,39 @@
       .service-details > p {
         max-width: 780px;
         color: var(--ink-soft);
+      }
+
+      .camp-topics {
+        border-bottom: 1px solid rgba(227, 93, 69, 0.24);
+      }
+
+      .camp-topic {
+        display: grid;
+        grid-template-columns: minmax(170px, 0.52fr) minmax(0, 1fr);
+        gap: clamp(24px, 4vw, 52px);
+        padding: 30px 0;
+        border-top: 1px solid rgba(227, 93, 69, 0.24);
+      }
+
+      .camp-topic h4 {
+        margin: 0;
+        color: #8c3d30;
+        font-size: 1rem;
+        line-height: 1.65;
+      }
+
+      .camp-topic-copy p {
+        max-width: 780px;
+        margin: 0;
+        color: var(--ink-soft);
+      }
+
+      .camp-topic-copy p + p {
+        margin-top: 18px;
+      }
+
+      .camp-topic .activity-list {
+        margin-top: 24px;
       }
 
       .activity-list,
@@ -1037,11 +1085,75 @@
         color: rgba(255, 255, 255, 0.76);
       }
 
+      .contact-actions {
+        display: grid;
+        gap: 20px;
+      }
+
+      .contact-primary {
+        min-height: 96px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 20px 24px;
+        color: var(--ink);
+        background: var(--yellow);
+        border-radius: 4px;
+        box-shadow: 0 12px 34px rgba(5, 24, 18, 0.2);
+        text-decoration: none;
+        transition: background 180ms ease, transform 180ms ease;
+      }
+
+      .contact-primary:hover {
+        background: #ffdc7a;
+        transform: translateY(-2px);
+      }
+
+      .contact-primary strong,
+      .contact-primary small {
+        display: block;
+      }
+
+      .contact-primary strong {
+        margin-top: 3px;
+        font-size: 1.05rem;
+      }
+
+      .contact-primary small {
+        margin-top: 5px;
+        color: rgba(24, 34, 30, 0.7);
+        font-size: 0.76rem;
+        font-weight: 700;
+      }
+
+      .contact-primary .contact-label {
+        color: rgba(24, 34, 30, 0.62);
+      }
+
+      .contact-primary-arrow {
+        flex: 0 0 auto;
+        font-size: 1.25rem;
+      }
+
       .contact-list {
         margin: 0;
         padding: 0;
         list-style: none;
         border-top: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      html.reveal-ready .reveal-item {
+        opacity: 0;
+        transform: translateY(16px);
+        transition:
+          opacity 520ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms),
+          transform 520ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms);
+      }
+
+      html.reveal-ready .reveal-item.is-revealed {
+        opacity: 1;
+        transform: translateY(0);
       }
 
       .contact-list a {
@@ -1300,6 +1412,13 @@
           border: 0;
         }
 
+        .nav-links a:not(.nav-join).is-active {
+          color: var(--forest-deep);
+          background: #edf3ef;
+          border-color: var(--line);
+          box-shadow: inset 3px 0 0 var(--coral);
+        }
+
         .hero {
           min-height: 82svh;
         }
@@ -1388,6 +1507,10 @@
 
         .service-body {
           padding: 0 0 70px;
+        }
+
+        .camp-topic {
+          grid-template-columns: minmax(160px, 0.45fr) minmax(0, 1fr);
         }
 
         .camp-gallery {
@@ -1584,6 +1707,16 @@
           padding: 78px 0;
         }
 
+        .camp-topic {
+          grid-template-columns: 1fr;
+          gap: 12px;
+          padding: 26px 0;
+        }
+
+        .camp-topic h4 {
+          font-size: 1.05rem;
+        }
+
         .camp-gallery {
           gap: 8px;
         }
@@ -1691,6 +1824,12 @@
           overflow-wrap: anywhere;
         }
 
+        .contact-primary {
+          min-height: 92px;
+          padding: 18px;
+          overflow-wrap: anywhere;
+        }
+
         .contact-form-wrap {
           margin-top: 54px;
           padding-top: 42px;
@@ -1748,8 +1887,15 @@
         .nav,
         .brand-logo,
         .back-to-top,
-        .read-more-arrow {
+        .read-more-arrow,
+        .contact-primary,
+        .reveal-item {
           transition: none;
+        }
+
+        html.reveal-ready .reveal-item {
+          opacity: 1;
+          transform: none;
         }
       }
     </style>
@@ -1993,27 +2139,47 @@
               <span class="read-more-arrow" aria-hidden="true">↓</span>
             </button>
             <div class="service-details collapsible-content" id="star-camp-details">
-              <p>
-                Universal Safety Net 『ASOBI』では、時折『STAR CAMP』を実施しています。言語は、人との関わりの中で使われるものです。そして、人々の営みと言葉が密接に結びついているのが「文化」です。私たちは、文化に触れることなしに、ことばを本当に身につけることは難しいと考えています。
-              </p>
-              <p>
-                例えば、日本語の検定試験は、在留資格や技能資格などの要件を満たすために必要なものです。しかし、教室での学習だけでは、人間関係や文化の中でことばを使う経験が不足しやすいという課題があります。
-              </p>
-              <p>
-                その文化に触れる一つの方法が『STAR CAMP』です。日本には、その地域ならではの四季の風景や生態系、人々の営みと自然との調和、歴史や伝統があります。STAR CAMPは、それらに直接触れ、さまざまな背景を持つ人たちが同じ体験を共有できる場です。
-              </p>
-              <p>
-                地域の食材で料理をしたり、参加者の母国の味を教え合ったり。森や星空の中で過ごす時間には、言葉だけでは届かない文化や暮らしの感覚があります。行き先やその場でする体験も、参加者と一緒に考えながら決めます。
-              </p>
-              <ul class="activity-list" aria-label="STAR CAMPの体験例">
-                <li>郷土料理と母国料理</li>
-                <li>森林浴</li>
-                <li>星空観察</li>
-                <li>釣り</li>
-                <li>ハイキング</li>
-                <li>音楽・ダンス</li>
-                <li>写真・映像</li>
-              </ul>
+              <div class="camp-topics">
+                <section class="camp-topic" aria-labelledby="camp-why-title">
+                  <h4 id="camp-why-title">なぜ文化体験なのか</h4>
+                  <div class="camp-topic-copy">
+                    <p>
+                      Universal Safety Net 『ASOBI』では、時折『STAR CAMP』を実施しています。言語は、人との関わりの中で使われるものです。そして、人々の営みと言葉が密接に結びついているのが「文化」です。私たちは、文化に触れることなしに、ことばを本当に身につけることは難しいと考えています。
+                    </p>
+                    <p>
+                      例えば、日本語の検定試験は、在留資格や技能資格などの要件を満たすために必要なものです。しかし、教室での学習だけでは、人間関係や文化の中でことばを使う経験が不足しやすいという課題があります。
+                    </p>
+                  </div>
+                </section>
+                <section class="camp-topic" aria-labelledby="camp-what-title">
+                  <h4 id="camp-what-title">何をするのか</h4>
+                  <div class="camp-topic-copy">
+                    <p>
+                      その文化に触れる一つの方法が『STAR CAMP』です。日本には、その地域ならではの四季の風景や生態系、人々の営みと自然との調和、歴史や伝統があります。STAR CAMPは、それらに直接触れ、さまざまな背景を持つ人たちが同じ体験を共有できる場です。
+                    </p>
+                    <p>
+                      地域の食材で料理をしたり、参加者の母国の味を教え合ったり。森や星空の中で過ごす時間には、言葉だけでは届かない文化や暮らしの感覚があります。
+                    </p>
+                  </div>
+                </section>
+                <section class="camp-topic" aria-labelledby="camp-how-title">
+                  <h4 id="camp-how-title">参加者とどうつくるのか</h4>
+                  <div class="camp-topic-copy">
+                    <p>
+                      行き先やその場でする体験も、参加者と一緒に考えながら決めます。
+                    </p>
+                    <ul class="activity-list" aria-label="STAR CAMPの体験例">
+                      <li>郷土料理と母国料理</li>
+                      <li>森林浴</li>
+                      <li>星空観察</li>
+                      <li>釣り</li>
+                      <li>ハイキング</li>
+                      <li>音楽・ダンス</li>
+                      <li>写真・映像</li>
+                    </ul>
+                  </div>
+                </section>
+              </div>
             </div>
           </div>
           <div class="camp-gallery" aria-label="STAR CAMPの写真">
@@ -2255,39 +2421,40 @@
               まずは気軽にご連絡ください。
             </p>
           </div>
-          <ul class="contact-list">
-            <li>
-              <a href="mailto:neowellness2024@gmail.com">
-                <span>
-                  <span class="contact-label">Email</span><br>
-                  neowellness2024@gmail.com
-                </span>
-                <span aria-hidden="true">↗</span>
-              </a>
-            </li>
-            <li>
-              <a href="tel:+819017284013">
-                <span>
-                  <span class="contact-label">Phone</span><br>
-                  090-1728-4013
-                </span>
-                <span aria-hidden="true">↗</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.facebook.com/groups/neowellness/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span>
-                  <span class="contact-label">Community</span><br>
-                  Facebook group
-                </span>
-                <span aria-hidden="true">↗</span>
-              </a>
-            </li>
-          </ul>
+          <div class="contact-actions">
+            <a class="contact-primary" href="mailto:neowellness2024@gmail.com">
+              <span>
+                <span class="contact-label">まずはこちらから</span>
+                <strong>メールで問い合わせる</strong>
+                <small>neowellness2024@gmail.com</small>
+              </span>
+              <span class="contact-primary-arrow" aria-hidden="true">↗</span>
+            </a>
+            <ul class="contact-list" aria-label="その他の連絡方法">
+              <li>
+                <a href="tel:+819017284013">
+                  <span>
+                    <span class="contact-label">Phone</span><br>
+                    090-1728-4013
+                  </span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/groups/neowellness/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>
+                    <span class="contact-label">Community</span><br>
+                    Facebook group
+                  </span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="section-inner contact-form-wrap">
           <div class="contact-form-head">
@@ -2365,13 +2532,45 @@
       const backToTop = document.querySelector(".back-to-top");
       const navToggle = document.querySelector(".nav-toggle");
       const navLinks = document.getElementById("site-nav-links");
+      const trackedNavLinks = Array.from(
+        document.querySelectorAll('.nav-links a[href^="#"], .nav-mobile-join[href^="#"]')
+      );
+      const trackedSectionIds = Array.from(
+        new Set(trackedNavLinks.map((link) => link.hash.slice(1)))
+      );
+      const trackedSections = trackedSectionIds
+        .map((id) => document.getElementById(id))
+        .filter(Boolean);
+
+      const updateActiveNavigation = () => {
+        const marker = window.scrollY + Math.min(window.innerHeight * 0.32, 220);
+        let activeId = "";
+
+        trackedSections.forEach((section) => {
+          if (section.offsetTop <= marker) {
+            activeId = section.id;
+          }
+        });
+
+        trackedNavLinks.forEach((link) => {
+          const isActive = link.hash === `#${activeId}`;
+          link.classList.toggle("is-active", isActive);
+          if (isActive) {
+            link.setAttribute("aria-current", "location");
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        });
+      };
 
       const updateScrollUi = () => {
         siteHeader.classList.toggle("is-scrolled", window.scrollY > 36);
         backToTop.classList.toggle("is-visible", window.scrollY > 560);
+        updateActiveNavigation();
       };
 
       window.addEventListener("scroll", updateScrollUi, { passive: true });
+      window.addEventListener("resize", updateActiveNavigation);
       updateScrollUi();
 
       const closeMenu = () => {
@@ -2429,6 +2628,53 @@
         readingMedia.addListener(configureReadingSections);
       }
       configureReadingSections();
+
+      const revealSelector = [
+        ".intro-strip-inner",
+        ".vision-heading",
+        ".vision-copy",
+        ".concept-head > *",
+        ".manifesto-mark",
+        ".manifesto blockquote",
+        ".manifesto p",
+        ".services .section-inner > *",
+        ".service-aside",
+        ".service-body",
+        ".camp-photo",
+        ".voice-title",
+        ".voice-photos",
+        ".voice-copy",
+        ".team-head > *",
+        ".member-card",
+        ".company-profile",
+        ".join-inner > *",
+        ".contact-form-wrap",
+      ].join(",");
+      const revealItems = Array.from(document.querySelectorAll(revealSelector));
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+      if ("IntersectionObserver" in window && !reducedMotion.matches) {
+        document.documentElement.classList.add("reveal-ready");
+        revealItems.forEach((item, index) => {
+          item.classList.add("reveal-item");
+          item.style.setProperty("--reveal-delay", `${(index % 3) * 70}ms`);
+        });
+
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              entry.target.classList.add("is-revealed");
+              observer.unobserve(entry.target);
+            });
+          },
+          { rootMargin: "0px 0px -10%", threshold: 0.08 }
+        );
+
+        revealItems.forEach((item) => revealObserver.observe(item));
+      } else {
+        revealItems.forEach((item) => item.classList.add("is-revealed"));
+      }
 
       document.getElementById("contact-form").addEventListener("submit", (event) => {
         event.preventDefault();
