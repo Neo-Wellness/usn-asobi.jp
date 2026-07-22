@@ -1085,57 +1085,6 @@
         color: rgba(255, 255, 255, 0.76);
       }
 
-      .contact-actions {
-        display: grid;
-        gap: 20px;
-      }
-
-      .contact-primary {
-        min-height: 96px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 24px;
-        padding: 20px 24px;
-        color: var(--ink);
-        background: var(--yellow);
-        border-radius: 4px;
-        box-shadow: 0 12px 34px rgba(5, 24, 18, 0.2);
-        text-decoration: none;
-        transition: background 180ms ease, transform 180ms ease;
-      }
-
-      .contact-primary:hover {
-        background: #ffdc7a;
-        transform: translateY(-2px);
-      }
-
-      .contact-primary strong,
-      .contact-primary small {
-        display: block;
-      }
-
-      .contact-primary strong {
-        margin-top: 3px;
-        font-size: 1.05rem;
-      }
-
-      .contact-primary small {
-        margin-top: 5px;
-        color: rgba(24, 34, 30, 0.7);
-        font-size: 0.76rem;
-        font-weight: 700;
-      }
-
-      .contact-primary .contact-label {
-        color: rgba(24, 34, 30, 0.62);
-      }
-
-      .contact-primary-arrow {
-        flex: 0 0 auto;
-        font-size: 1.25rem;
-      }
-
       .contact-list {
         margin: 0;
         padding: 0;
@@ -1824,12 +1773,6 @@
           overflow-wrap: anywhere;
         }
 
-        .contact-primary {
-          min-height: 92px;
-          padding: 18px;
-          overflow-wrap: anywhere;
-        }
-
         .contact-form-wrap {
           margin-top: 54px;
           padding-top: 42px;
@@ -1888,7 +1831,6 @@
         .brand-logo,
         .back-to-top,
         .read-more-arrow,
-        .contact-primary,
         .reveal-item {
           transition: none;
         }
@@ -2421,40 +2363,39 @@
               まずは気軽にご連絡ください。
             </p>
           </div>
-          <div class="contact-actions">
-            <a class="contact-primary" href="mailto:neowellness2024@gmail.com">
-              <span>
-                <span class="contact-label">まずはこちらから</span>
-                <strong>メールで問い合わせる</strong>
-                <small>neowellness2024@gmail.com</small>
-              </span>
-              <span class="contact-primary-arrow" aria-hidden="true">↗</span>
-            </a>
-            <ul class="contact-list" aria-label="その他の連絡方法">
-              <li>
-                <a href="tel:+819017284013">
-                  <span>
-                    <span class="contact-label">Phone</span><br>
-                    090-1728-4013
-                  </span>
-                  <span aria-hidden="true">↗</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.facebook.com/groups/neowellness/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>
-                    <span class="contact-label">Community</span><br>
-                    Facebook group
-                  </span>
-                  <span aria-hidden="true">↗</span>
-                </a>
-              </li>
-            </ul>
-          </div>
+          <ul class="contact-list">
+            <li>
+              <a href="mailto:neowellness2024@gmail.com">
+                <span>
+                  <span class="contact-label">Email</span><br>
+                  neowellness2024@gmail.com
+                </span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+819017284013">
+                <span>
+                  <span class="contact-label">Phone</span><br>
+                  090-1728-4013
+                </span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/groups/neowellness/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>
+                  <span class="contact-label">Community</span><br>
+                  Facebook group
+                </span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </li>
+          </ul>
         </div>
         <div class="section-inner contact-form-wrap">
           <div class="contact-form-head">
