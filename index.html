@@ -733,6 +733,29 @@
         margin-top: 24px;
       }
 
+      .camp-topic-participation {
+        display: block;
+        padding: 34px 0 38px;
+      }
+
+      .camp-topic-participation .camp-topic-copy {
+        display: grid;
+        grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1.28fr);
+        gap: clamp(30px, 5vw, 64px);
+        align-items: start;
+      }
+
+      .camp-participation-lead {
+        color: var(--ink) !important;
+        font-size: 1.04rem;
+        font-weight: 700;
+        line-height: 1.9;
+      }
+
+      .camp-topic-participation .activity-list {
+        margin: 0;
+      }
+
       .activity-list,
       .lesson-list {
         margin: 32px 0 0;
@@ -1666,6 +1689,11 @@
           font-size: 1.05rem;
         }
 
+        .camp-topic-participation .camp-topic-copy {
+          grid-template-columns: 1fr;
+          gap: 22px;
+        }
+
         .camp-gallery {
           gap: 8px;
         }
@@ -2104,10 +2132,9 @@
                     </p>
                   </div>
                 </section>
-                <section class="camp-topic" aria-labelledby="camp-how-title">
-                  <h4 id="camp-how-title">参加者とどうつくるのか</h4>
+                <section class="camp-topic camp-topic-participation" aria-label="参加者とつくる体験">
                   <div class="camp-topic-copy">
-                    <p>
+                    <p class="camp-participation-lead">
                       行き先やその場でする体験も、参加者と一緒に考えながら決めます。
                     </p>
                     <ul class="activity-list" aria-label="STAR CAMPの体験例">
